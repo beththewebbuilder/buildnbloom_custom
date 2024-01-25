@@ -4,7 +4,7 @@
   "name": "create-block/build-n-bloom-blocks",
   "version": "0.1.0",
   "title": "Build N Bloom Blocks",
-  "category": "widgets",
+  "category": "buildnbloom",
   "icon": "smiley",
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
