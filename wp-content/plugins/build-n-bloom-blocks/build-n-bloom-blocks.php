@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function build_n_bloom_blocks_build_n_bloom_blocks_block_init() {
+function image_background_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'build_n_bloom_blocks_build_n_bloom_blocks_block_init' );
+add_action( 'init', 'image_background_block_init' );
