@@ -14,10 +14,6 @@
 			"type": "number",
 			"default": 25
 		},
-		"mobileHeight": {
-			"type": "number",
-			"default": 25
-		},
         "addPadding": {
           "type": "boolean",
           "default": true

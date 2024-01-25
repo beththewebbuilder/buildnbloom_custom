@@ -8,8 +8,15 @@
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="0"] img {
-  height: 0vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="0"] img {
+    height: 0vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="0"] img {
+    height: 0vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="0"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0);
@@ -17,8 +24,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="0"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="5"] img {
-  height: 5vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="5"] img {
+    height: 5vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="5"] img {
+    height: 5vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="5"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.05);
@@ -26,8 +40,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="5"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.05);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="10"] img {
-  height: 10vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="10"] img {
+    height: 10vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="10"] img {
+    height: 10vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="10"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.1);
@@ -35,8 +56,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="10"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="15"] img {
-  height: 15vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="15"] img {
+    height: 15vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="15"] img {
+    height: 15vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="15"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.15);
@@ -44,8 +72,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="15"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.15);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="20"] img {
-  height: 20vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="20"] img {
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="20"] img {
+    height: 20vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="20"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.2);
@@ -53,8 +88,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="20"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="25"] img {
-  height: 25vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="25"] img {
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="25"] img {
+    height: 25vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="25"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.25);
@@ -62,8 +104,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="25"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.25);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="30"] img {
-  height: 30vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="30"] img {
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="30"] img {
+    height: 30vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="30"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.3);
@@ -71,8 +120,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="30"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.3);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="35"] img {
-  height: 35vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="35"] img {
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="35"] img {
+    height: 35vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="35"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.35);
@@ -80,8 +136,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="35"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.35);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="40"] img {
-  height: 40vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="40"] img {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="40"] img {
+    height: 40vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="40"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.4);
@@ -89,8 +152,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="40"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="45"] img {
-  height: 45vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="45"] img {
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="45"] img {
+    height: 45vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="45"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.45);
@@ -98,8 +168,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="45"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.45);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="50"] img {
-  height: 50vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="50"] img {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="50"] img {
+    height: 50vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="50"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.5);
@@ -107,8 +184,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="50"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="55"] img {
-  height: 55vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="55"] img {
+    height: 55vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="55"] img {
+    height: 55vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="55"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.55);
@@ -116,8 +200,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="55"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.55);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="60"] img {
-  height: 60vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="60"] img {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="60"] img {
+    height: 60vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="60"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.6);
@@ -125,8 +216,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="60"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.6);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="65"] img {
-  height: 65vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="65"] img {
+    height: 65vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="65"] img {
+    height: 65vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="65"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.65);
@@ -134,8 +232,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="65"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.65);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="70"] img {
-  height: 70vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="70"] img {
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="70"] img {
+    height: 70vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="70"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.7);
@@ -143,8 +248,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="70"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.7);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="75"] img {
-  height: 75vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="75"] img {
+    height: 75vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="75"] img {
+    height: 75vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="75"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.75);
@@ -152,8 +264,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="75"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.75);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="80"] img {
-  height: 80vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="80"] img {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="80"] img {
+    height: 80vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="80"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.8);
@@ -161,8 +280,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="80"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="85"] img {
-  height: 85vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="85"] img {
+    height: 85vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="85"] img {
+    height: 85vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="85"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.85);
@@ -170,8 +296,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="85"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.85);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="90"] img {
-  height: 90vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="90"] img {
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="90"] img {
+    height: 90vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="90"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.9);
@@ -179,8 +312,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="90"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.9);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="95"] img {
-  height: 95vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="95"] img {
+    height: 95vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="95"] img {
+    height: 95vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="95"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.95);
@@ -188,8 +328,15 @@
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="95"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.95);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="100"] img {
-  height: 100vh;
+@media screen and (min-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="100"] img {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="100"] img {
+    height: 100vh;
+  }
 }
 .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="100"][data-background-opacity=white] .image-background-content {
   background-color: rgb(255, 255, 255);

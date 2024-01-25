@@ -1,5 +1,3 @@
-@import "../../variables.scss";
-
 .wp-block-build-n-bloom-blocks-image-background[data-class*="image-background"] {
 		position: relative;
 
@@ -10,17 +8,8 @@
 
 		@for $i from 0 through 20 {
 			&[data-container-height="#{$i * 5}"] {
-				@media screen and (min-width:$sml-screen-size) {
-					img {
-						height: ($i*5) + vh;
-					}
-				}
-			}
-			&[data-mobile-container-height="#{$i * 5}"] {
-				@media screen and (max-width:$sml-screen-size) {
-					img {
-						height: ($i*5) + vh;
-					}	
+				img {
+					height: ($i*5) + vh;
 				}
 			}
 			

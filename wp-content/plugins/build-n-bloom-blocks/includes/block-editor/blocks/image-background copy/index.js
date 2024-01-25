@@ -37,9 +37,6 @@ registerBlockType(name, {
 	function onSetContainerHeight( containerHeightValue ) {
 		setAttributes( { containerHeight: containerHeightValue } );
 	}
-	function onSetMobileContainerHeight( mobileContainerHeightValue ) {
-		setAttributes( { mobileHeight: mobileContainerHeightValue } );
-	}
 	function onSetPadding( addPaddingValue ) {
 		setAttributes( { addPadding: addPaddingValue } );
 	}
@@ -58,13 +55,6 @@ registerBlockType(name, {
 					label="Background screen size"
 					value={ attributes.containerHeight }
 					onChange={ onSetContainerHeight }
-					min={5}
-					max={100}
-					step={5}/>
-				<RangeControl
-					label="Mobile background screen size"
-					value={ attributes.mobileHeight }
-					onChange={ onSetMobileContainerHeight }
 					min={5}
 					max={100}
 					step={5}/>

@@ -71,6 +71,11 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         containerHeight: containerHeightValue
       });
     }
+    function onSetMobileContainerHeight(mobileContainerHeightValue) {
+      setAttributes({
+        mobileHeight: mobileContainerHeightValue
+      });
+    }
     function onSetPadding(addPaddingValue) {
       setAttributes({
         addPadding: addPaddingValue
@@ -96,6 +101,13 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       label: "Background screen size",
       value: attributes.containerHeight,
       onChange: onSetContainerHeight,
+      min: 5,
+      max: 100,
+      step: 5
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+      label: "Mobile background screen size",
+      value: attributes.mobileHeight,
+      onChange: onSetMobileContainerHeight,
       min: 5,
       max: 100,
       step: 5
@@ -171,6 +183,7 @@ function save({
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps.save(), {
     "data-class": "image-background",
     "data-container-height": attributes.containerHeight,
+    "data-mobile-container-height": attributes.mobileHeight,
     "data-background-opacity": attributes.opacityColour,
     "data-top-bottom-padding": attributes.addPadding,
     "data-opacity-percentage": attributes.backgroundOpacityPercent
@@ -286,7 +299,7 @@ function _extends() {
   \******************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"addPadding":{"type":"boolean","default":true},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"addPadding":{"type":"boolean","default":true},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
 
 /***/ })
 

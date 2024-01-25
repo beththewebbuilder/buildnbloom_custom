@@ -10,7 +10,6 @@ export default function save({attributes}) {
 		<div {...useBlockProps.save()} 
 		data-class={"image-background"} 
 		data-container-height={attributes.containerHeight} 
-		data-mobile-container-height={attributes.mobileHeight}
 		data-background-opacity={attributes.opacityColour}
 		data-top-bottom-padding={attributes.addPadding}
 		data-opacity-percentage={attributes.backgroundOpacityPercent}>
