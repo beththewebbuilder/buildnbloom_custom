@@ -1,46 +1,235 @@
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./includes/block-editor/blocks/image-background/style.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************/
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] {
   position: relative;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] img {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-top-bottom-padding=true] {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="0"] img {
+  height: 0vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="0"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="0"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="5"] img {
+  height: 5vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="5"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="5"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="10"] img {
+  height: 10vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="10"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="10"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="15"] img {
+  height: 15vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="15"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="15"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="20"] img {
+  height: 20vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="20"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="20"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="25"] img {
+  height: 25vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="25"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="25"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="30"] img {
+  height: 30vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="30"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="30"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="35"] img {
+  height: 35vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="35"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="35"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="40"] img {
+  height: 40vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="40"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="40"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="45"] img {
+  height: 45vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="45"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="45"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="50"] img {
+  height: 50vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="50"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="50"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="55"] img {
+  height: 55vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="55"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="55"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="60"] img {
+  height: 60vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="60"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="60"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="65"] img {
+  height: 65vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="65"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="65"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="70"] img {
+  height: 70vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="70"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="70"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="75"] img {
+  height: 75vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="75"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="75"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="80"] img {
+  height: 80vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="80"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="80"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="85"] img {
+  height: 85vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="85"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="85"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="90"] img {
+  height: 90vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="90"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="90"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="95"] img {
+  height: 95vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="95"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="95"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="100"] img {
+  height: 100vh;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="100"][data-background-opacity=white] .image-background-content {
+  background-color: rgb(255, 255, 255);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="100"][data-background-opacity=black] .image-background-content {
+  background-color: rgb(0, 0, 0);
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] figure {
+  margin-bottom: 0;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] figure img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] [data-container-height=full-screen] img {
-  height: 100vh;
-}
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] [data-container-height=three-quarter-height] img {
-  height: 75vh;
-}
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] [data-container-height=half-height] img {
-  height: 50vh;
-}
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] [data-container-height=one-quarter-height] {
-  height: 25vh;
-}
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] figure {
-  margin-bottom: 0;
-}
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background].background-top-bottom-padding {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] .image-background-content {
-  background-color: rgba(0, 0, 0, 0.5);
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class=image-background] .image-background-content .content-center {
-  width: 70%;
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content .content-center-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content .content-center-container .content-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content .content-center-container .content-center h1 {
+  font-size: 6rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content .content-center-container .content-center h2 {
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=style-image-background.css.map*/

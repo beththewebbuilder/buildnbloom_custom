@@ -4,20 +4,28 @@
 	"version": "0.1.0",
 	"title": "Image Background",
 	"category": "buildnbloom",
-	"icon": "smiley",
-	"description": "The second block!",
+	"icon": "format-image",
+	"description": "A full width image as background with an optional heading and button displayed on top.",
 	"supports": {
 		"html": false
 	},
 	"attributes": {
         "containerHeight": {
-            "type": "string",
-            "default": "one-quarter-height"
-          },
+			"type": "number",
+			"default": 25
+		},
         "addPadding": {
           "type": "boolean",
           "default": true
-        }
+        },
+		"opacityColour": {
+			"type": "string",
+			"default": "white"
+		},
+		"backgroundOpacityPercent": {
+			"type": "number",
+			"default": 50
+		}
     },
 	"textdomain": "multiple-blocks",
 	"editorScript": "file:../../../../build/image-background.js",

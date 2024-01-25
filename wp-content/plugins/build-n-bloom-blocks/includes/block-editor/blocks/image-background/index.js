@@ -1,7 +1,7 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls, InnerBlocks } from '@wordpress/block-editor';
-import { PanelBody, PanelRow, SelectControl, CheckboxControl } from '@wordpress/components';
+import { PanelBody, PanelRow, SelectControl, Button, ButtonGroup, ColorPalette, RangeControl, ToggleControl } from '@wordpress/components';
 import './style.scss';
 import '../../block-editor-group.scss';
 
@@ -19,9 +19,12 @@ const BLOCK_TEMPLATE = [
   ['core/group', {}, [
     ['core/image', { className: 'no-padding' }],
     ['core/group', { className: 'image-background-content absolute-cover' }, [
-        ['core/group', { className: 'content-center center-transform' }, [
-            ['core/heading'],
-            ['core/button'],
+        ['core/group', { className: 'content-center-container' }, [
+			['core/group', { className: 'content-center' }, [
+				['core/heading', { level: 1, placeholder: 'Main large heading'}],
+				['core/heading', { level: 2, placeholder: 'Subheading'}],
+				['core/button'],
+			]]
         ]]
     ]]
 ]]];
@@ -32,35 +35,50 @@ registerBlockType(name, {
 
 	// custom functions
 	function onSetContainerHeight( containerHeightValue ) {
-	setAttributes( { containerHeight: containerHeightValue } );
+		setAttributes( { containerHeight: containerHeightValue } );
 	}
 	function onSetPadding( addPaddingValue ) {
-	setAttributes( { addPadding: addPaddingValue } );
+		setAttributes( { addPadding: addPaddingValue } );
+	}
+	function onOpacityColourChange( newColour ) {
+        setAttributes( { opacityColour: newColour } )
+	}
+	function onChangeOpacityPercent( newPercentage ) {
+		setAttributes( { backgroundOpacityPercent: newPercentage } );
 	}
 
 	return (
 		<div {...useBlockProps()}>
 		<InspectorControls style={ { marginBottom: '40px'} }>
 			<PanelBody title={'Image Container Settings'}>
-				<PanelRow>
-					<SelectControl
-					label="Media size"
+				<RangeControl
+					label="Background screen size"
 					value={ attributes.containerHeight }
-					options={[
-						{ label: 'Full screen', value: 'full-screen' },
-						{ label: '3/4 height', value: 'three-quarter-height' },
-						{ label: '1/2 height', value: 'half-height' },
-						{ label: '1/4 height', value: 'one-quarter-height' },
-					]}
 					onChange={ onSetContainerHeight }
-					/>
-				</PanelRow>
-				<PanelRow>
-					<CheckboxControl
-					label="Add gap/padding top and bottom"
+					min={5}
+					max={100}
+					step={5}/>
+				<ToggleControl
+					label="Padding top and bottom (3rem)"
 					checked={ attributes.addPadding }
-					onChange={ onSetPadding }/>
-				</PanelRow>
+					onChange={ onSetPadding }
+				/>
+				<SelectControl
+					label="White or Black opacity"
+					value={ attributes.opacityColour }
+					options={[
+						{ label: 'White', value: 'white'},
+						{ label: 'Black', value: 'black' }
+					]}
+					onChange={ onOpacityColourChange }
+				/>
+				<RangeControl
+					label="Opacity"
+					value={ attributes.backgroundOpacityPercent }
+					onChange={ onChangeOpacityPercent }
+					min={0}
+					max={100}
+					step={5}/>
 			</PanelBody>
 		</InspectorControls>,
 

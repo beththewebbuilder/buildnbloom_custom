@@ -1,53 +1,69 @@
-.wp-block-build-n-bloom-blocks-image-background[data-class="image-background"] {
-    position: relative;
+.wp-block-build-n-bloom-blocks-image-background[data-class*="image-background"] {
+		position: relative;
 
-	img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-	[data-container-height="full-screen"] {
-		img {
-			height: 100vh;
+		&[data-top-bottom-padding="true"] {
+			margin-top: 3rem;
+			margin-bottom: 3rem;
 		}
-	}
-	[data-container-height="three-quarter-height"] {
-		img {
-			height: 75vh;
+
+		@for $i from 0 through 20 {
+			&[data-container-height="#{$i * 5}"] {
+				img {
+					height: ($i*5) + vh;
+				}
+			}
+			
+			&[data-opacity-percentage="#{$i * 5}"] {
+				&[data-background-opacity="white"] {
+					.image-background-content {
+						background-color: rgba(255, 255, 255, (($i*5)/100));
+					}
+				}
+				&[data-background-opacity="black"] {
+					.image-background-content {
+						background-color: rgba(0, 0, 0, (($i*5)/100));
+					}
+				}
+			}
 		}
-	}
-	[data-container-height="half-height"] {
-		img {
-			height: 50vh;
+
+		figure {
+			margin-bottom: 0;
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+
 		}
-	}
-	[data-container-height="one-quarter-height"] {
-		height: 25vh;
-	}
-    figure {
-        margin-bottom: 0;
-    }
 
-    &.background-top-bottom-padding {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
+		.image-background-content {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
 
-    
+			.content-center-container {
+				position: relative;	
+				width: 100%;
+				height: 100%;
 
-    .image-background-content {
-        background-color: rgba(0,0,0,0.5);
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
+				.content-center {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					text-align: center;
 
-        .content-center {
-            width: 70%;
-            text-align: center;
-            color: white;
-        }
-    }
+					h1 {
+						font-size: 6rem;
+					}
+					h2 {
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+	
 }
