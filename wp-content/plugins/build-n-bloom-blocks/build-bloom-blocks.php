@@ -41,7 +41,7 @@ add_filter( 'block_categories_all', 'custom_block_category', 10, 2);
 function build_n_bloom_blocks_init() {
 
 	$blocks = array(
-		'image-background/',
+        'image-background/',
 		'block-two/',
 		'block-three/',
 	);

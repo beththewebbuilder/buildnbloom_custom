@@ -1,37 +1,69 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-import { useBlockProps } from '@wordpress/block-editor';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
+import { useBlockProps, InspectorControls, InnerBlocks } from '@wordpress/block-editor';
+import { PanelBody, PanelRow, SelectControl, CheckboxControl } from '@wordpress/components';
 import './editor.scss';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
- * @return {WPElement} Element to render.
- */
-export default function Edit() {
+// inner content settings
+const ALLLOWED_BLOCKS = ['core/group'];
+const BLOCK_TEMPLATE = [
+  ['core/group', {}, [
+    ['core/image', { className: 'no-padding' }],
+    ['core/group', { className: 'image-background-content absolute-cover' }, [
+        ['core/group', { className: 'content-center center-transform' }, [
+            ['core/heading'],
+            ['core/button'],
+        ]]
+    ]]
+]]];
+
+export default function Edit({ attributes, setAttributes }) {
+	const { containerHeight, addPadding } = attributes;
+
+	// custom functions
+	function onSetContainerHeight( containerHeightValue ) {
+	setAttributes( { containerHeight: containerHeightValue } );
+	}
+	function onSetPadding( addPaddingValue ) {
+	setAttributes( { addPadding: addPaddingValue } );
+	}
+
 	return (
-		<p {...useBlockProps()}>
-			{__('First Block – hello from the editor!', 'multiple-blocks')}
-		</p>
+		<div {...useBlockProps()}>
+			<InspectorControls style={ { marginBottom: '40px'} }>
+        <PanelBody title={'Image Container Settings'}>
+          <PanelRow>
+            <SelectControl
+              label="Media size"
+              value={ attributes.containerHeight }
+              options={[
+                { label: 'Full screen', value: 'full-screen' },
+                { label: '3/4 height', value: 'three-quarter-height' },
+                { label: '1/2 height', value: 'half-height' },
+                { label: '1/4 height', value: 'one-quarter-height' },
+              ]}
+              onChange={ onSetContainerHeight }
+            />
+          </PanelRow>
+          <PanelRow>
+            <CheckboxControl
+              label="Add gap/padding top and bottom"
+              checked={ attributes.addPadding }
+              onChange={ onSetPadding }/>
+          </PanelRow>
+        </PanelBody>
+      </InspectorControls>,
+
+        // templateLock: enforces rules on what the user is allowed to change. 'All' - disabled user control, 'Insert' - change order but no deleting or inserting, 'False' - off
+        <div class="image-background-block custom-block">
+          <img src="https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"/>
+          <InnerBlocks 
+            allowedBlocks={ ALLLOWED_BLOCKS } 
+            template={ BLOCK_TEMPLATE } 
+            templateLock="all"
+            templateInsertUpdatesSelection={false}
+            renderAppender={ InnerBlocks.DefaultBlockAppender }
+          />
+        </div>
+		</div>
 	);
 }

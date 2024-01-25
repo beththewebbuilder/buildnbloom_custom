@@ -1,5 +1,5 @@
 {
-	"name": "build-n-bloom-blocks",
+	"name": "multiple-blocks",
 	"version": "0.1.0",
 	"description": "The first block!",
 	"author": "The WordPress Contributors",
@@ -10,7 +10,6 @@
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-        "plugin-sass": "sass --watch includes/block-editor/block-editor.scss build/style-block-editor.css",
 		"start": "wp-scripts start",
 		"packages-update": "wp-scripts packages-update"
 	},
