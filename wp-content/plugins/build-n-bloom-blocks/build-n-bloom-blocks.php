@@ -45,6 +45,6 @@ add_filter( 'block_categories_all', 'custom_block_category', 10, 2);
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function image_background_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type( __DIR__ . '/build/image-background' );
 }
 add_action( 'init', 'image_background_block_init' );
