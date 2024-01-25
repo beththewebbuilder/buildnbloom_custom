@@ -17,6 +17,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+/** 
+ * Register the new group/category of gutenburg blocks
+ */      
+function custom_block_category( $categories ) {
+    $custom_block = array(
+        'slug'  => 'buildnbloom',
+        'title' => __( 'Build N Bloom', 'buildnbloom' ),
+    );
+  
+    $categories_sorted = array();
+    $categories_sorted[0] = $custom_block;
+  
+    foreach ($categories as $category) {
+        $categories_sorted[] = $category;
+    }
+  
+    return $categories_sorted;
+}
+add_filter( 'block_categories_all', 'custom_block_category', 10, 2);
+
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
