@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "create-block/build-n-bloom-blocks",
+  "name": "build-n-bloom-blocks/image-background",
   "version": "0.1.0",
-  "title": "Build N Bloom Blocks",
+  "title": "Image Background",
   "category": "buildnbloom",
   "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "description": "A full width image as background with optional headings and button on the top.",
   "example": {},
   "supports": {
     "html": false

@@ -223,7 +223,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/build-n-bloom-blocks","version":"0.1.0","title":"Build N Bloom Blocks","category":"buildnbloom","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"build-n-bloom-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"smiley","description":"A full width image as background with optional headings and button on the top.","example":{},"supports":{"html":false},"textdomain":"build-n-bloom-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
