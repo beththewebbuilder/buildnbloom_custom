@@ -1,0 +1,44 @@
+.custom-block {
+    border: 5px solid #0071BC;
+    background-color: #CCE3F2;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.video-container-block, .autoplay-video-container-block {
+    border-color: #E24C74;
+    background-color: #F9DBE3;
+}
+
+.content-container-block, .accordion-block {
+    border-color: #037956;
+    background-color: #CDE4DD;
+}
+
+.review-carousel-container-block, .quad-image-button-block {
+    border-color: #EF5229;
+    background-color: #F9BAA9;
+}
+
+.review-container-block {
+    border-color: #EF7C35;
+    background-color: #EFAA7F;
+}
+
+.image-background-block {
+    .components-resizable-box__container {
+        width: 100% !important;
+        img {
+            height: 10rem;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.custom-label {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 2.4;
+}

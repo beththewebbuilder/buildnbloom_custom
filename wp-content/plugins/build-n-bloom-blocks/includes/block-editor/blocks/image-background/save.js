@@ -5,7 +5,7 @@ export default function save({attributes}) {
 	const { containerHeight, addPadding } = attributes;
 
 	return (
-		<div {...useBlockProps.save()} class={"image-background" + (attributes.addPadding ? " background-top-bottom-padding" : "")} data-container-height={attributes.containerHeight}>
+		<div {...useBlockProps.save()} data-class={"image-background" + (attributes.addPadding ? " background-top-bottom-padding" : "")} data-container-height={attributes.containerHeight}>
 			<InnerBlocks.Content />
 		</div>
 	);
