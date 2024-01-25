@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./includes/block-editor/blocks/block-one/edit.js":
-/*!********************************************************!*\
-  !*** ./includes/block-editor/blocks/block-one/edit.js ***!
-  \********************************************************/
+/***/ "./includes/block-editor/blocks/image-background/edit.js":
+/*!***************************************************************!*\
+  !*** ./includes/block-editor/blocks/image-background/edit.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/block-one/editor.scss");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/image-background/editor.scss");
 
 /**
  * Retrieves the translation of text.
@@ -56,19 +56,19 @@ function Edit() {
 
 /***/ }),
 
-/***/ "./includes/block-editor/blocks/block-one/index.js":
-/*!*********************************************************!*\
-  !*** ./includes/block-editor/blocks/block-one/index.js ***!
-  \*********************************************************/
+/***/ "./includes/block-editor/blocks/image-background/index.js":
+/*!****************************************************************!*\
+  !*** ./includes/block-editor/blocks/image-background/index.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./includes/block-editor/blocks/block-one/style.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./includes/block-editor/blocks/block-one/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./includes/block-editor/blocks/block-one/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/block-one/block.json");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./includes/block-editor/blocks/image-background/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./includes/block-editor/blocks/image-background/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./includes/block-editor/blocks/image-background/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/image-background/block.json");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -115,10 +115,10 @@ const {
 
 /***/ }),
 
-/***/ "./includes/block-editor/blocks/block-one/save.js":
-/*!********************************************************!*\
-  !*** ./includes/block-editor/blocks/block-one/save.js ***!
-  \********************************************************/
+/***/ "./includes/block-editor/blocks/image-background/save.js":
+/*!***************************************************************!*\
+  !*** ./includes/block-editor/blocks/image-background/save.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -161,10 +161,10 @@ function save() {
 
 /***/ }),
 
-/***/ "./includes/block-editor/blocks/block-one/editor.scss":
-/*!************************************************************!*\
-  !*** ./includes/block-editor/blocks/block-one/editor.scss ***!
-  \************************************************************/
+/***/ "./includes/block-editor/blocks/image-background/editor.scss":
+/*!*******************************************************************!*\
+  !*** ./includes/block-editor/blocks/image-background/editor.scss ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -173,10 +173,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./includes/block-editor/blocks/block-one/style.scss":
-/*!***********************************************************!*\
-  !*** ./includes/block-editor/blocks/block-one/style.scss ***!
-  \***********************************************************/
+/***/ "./includes/block-editor/blocks/image-background/style.scss":
+/*!******************************************************************!*\
+  !*** ./includes/block-editor/blocks/image-background/style.scss ***!
+  \******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -225,13 +225,13 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
-/***/ "./includes/block-editor/blocks/block-one/block.json":
-/*!***********************************************************!*\
-  !*** ./includes/block-editor/blocks/block-one/block.json ***!
-  \***********************************************************/
+/***/ "./includes/block-editor/blocks/image-background/block.json":
+/*!******************************************************************!*\
+  !*** ./includes/block-editor/blocks/image-background/block.json ***!
+  \******************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"twitchstreams/first-block","version":"0.1.0","title":"First Block","category":"design","icon":"smiley","description":"The first block!","supports":{"html":false},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/block-one.js","editorStyle":"file:../../../../build/block-one.css","style":"file:../../../../build/style-block-one.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background with Button","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button placed on top.","supports":{"html":false},"textdomain":"build-n-bloom-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
 
 /***/ })
 
@@ -345,8 +345,8 @@ module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"twitchstreams/
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"block-one": 0,
-/******/ 			"style-block-one": 0
+/******/ 			"image-background": 0,
+/******/ 			"style-image-background": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -396,9 +396,9 @@ module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"twitchstreams/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["style-block-one"], () => (__webpack_require__("./includes/block-editor/blocks/block-one/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["style-image-background"], () => (__webpack_require__("./includes/block-editor/blocks/image-background/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=block-one.js.map
+//# sourceMappingURL=image-background.js.map

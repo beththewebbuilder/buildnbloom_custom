@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "build-n-bloom-blocks/image-background",
+	"version": "0.1.0",
+	"title": "Image Background with Button",
+	"category": "buildnbloom",
+	"icon": "format-image",
+	"description": "A full width image as background with an optional heading and button placed on top.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "build-n-bloom-blocks",
+	"editorScript": "file:../../../../build/image-background.js",
+	"editorStyle": "file:../../../../build/image-background.css",
+	"style": "file:../../../../build/style-image-background.css"
+}

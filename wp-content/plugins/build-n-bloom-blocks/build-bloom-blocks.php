@@ -10,8 +10,26 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       multiple-blocks build-n-bloom-blocks
  *
- * @package           twitchstreams
+ * @package           buildnbloom
  */
+
+ // Register the new group/category of gutenburg blocks,     
+function custom_block_category( $categories ) {
+    $custom_block = array(
+        'slug'  => 'buildnbloom',
+        'title' => __( 'Build N Bloom', 'buildnbloom' ),
+    );
+  
+    $categories_sorted = array();
+    $categories_sorted[0] = $custom_block;
+  
+    foreach ($categories as $category) {
+        $categories_sorted[] = $category;
+    }
+  
+    return $categories_sorted;
+}
+add_filter( 'block_categories_all', 'custom_block_category', 10, 2);
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -23,7 +41,7 @@
 function build_n_bloom_blocks_init() {
 
 	$blocks = array(
-		'block-one/',
+		'image-background/',
 		'block-two/',
 		'block-three/',
 	);
