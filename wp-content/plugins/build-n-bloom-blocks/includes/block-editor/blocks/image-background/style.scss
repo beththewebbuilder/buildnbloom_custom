@@ -12,14 +12,14 @@
 			&[data-container-height="#{$i * 5}"] {
 				@media screen and (min-width:$sml-screen-size) {
 					img {
-						height: ($i*5) + vh;
+						height: calc($i*5) + vh;
 					}
 				}
 			}
 			&[data-mobile-container-height="#{$i * 5}"] {
 				@media screen and (max-width:$sml-screen-size) {
 					img {
-						height: ($i*5) + vh;
+						height: calc($i*5) + vh;
 					}	
 				}
 			}
@@ -27,12 +27,12 @@
 			&[data-opacity-percentage="#{$i * 5}"] {
 				&[data-background-opacity="white"] {
 					.image-background-content {
-						background-color: rgba(255, 255, 255, (($i*5)/100));
+						background-color: rgba(255, 255, 255, calc(($i*5)/100));
 					}
 				}
 				&[data-background-opacity="black"] {
 					.image-background-content {
-						background-color: rgba(0, 0, 0, (($i*5)/100));
+						background-color: rgba(0, 0, 0, calc(($i*5)/100));
 					}
 				}
 			}

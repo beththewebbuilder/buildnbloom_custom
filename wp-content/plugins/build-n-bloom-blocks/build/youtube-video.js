@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./includes/block-editor/blocks/image-background/index.js":
-/*!****************************************************************!*\
-  !*** ./includes/block-editor/blocks/image-background/index.js ***!
-  \****************************************************************/
+/***/ "./includes/block-editor/blocks/youtube-video/index.js":
+/*!*************************************************************!*\
+  !*** ./includes/block-editor/blocks/youtube-video/index.js ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -19,10 +19,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./includes/block-editor/blocks/image-background/style.scss");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./includes/block-editor/blocks/youtube-video/style.scss");
 /* harmony import */ var _block_editor_group_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-editor-group.scss */ "./includes/block-editor/block-editor-group.scss");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./save */ "./includes/block-editor/blocks/image-background/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/image-background/block.json");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./save */ "./includes/block-editor/blocks/youtube-video/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/youtube-video/block.json");
 
 
 
@@ -31,9 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/**
- * Internal dependencies
- */
+// Internal dependencies
 
 
 const {
@@ -42,23 +40,19 @@ const {
   ...settings
 } = _block_json__WEBPACK_IMPORTED_MODULE_8__;
 
+/** TO DO: Add image 
+ * Add image location (centre, top, bottom)
+ * Add video text location (centre, bottom)
+ * Add image opacity
+*/
+
 // inner content settings
 const ALLLOWED_BLOCKS = ['core/group'];
-const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
+const BLOCK_TEMPLATE = [['core/group', {}, [['core/heading', {
+  placeholder: 'Video name; e.g. Joe and Jane Bloggs // Wedding location'
+}], ['core/image', {
   className: 'no-padding'
-}], ['core/group', {
-  className: 'image-background-content absolute-cover'
-}, [['core/group', {
-  className: 'content-center-container'
-}, [['core/group', {
-  className: 'content-center'
-}, [['core/heading', {
-  level: 1,
-  placeholder: 'Main large heading'
-}], ['core/heading', {
-  level: 2,
-  placeholder: 'Subheading'
-}], ['core/button']]]]]]]]]];
+}]]]];
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(name, {
   ...settings,
   edit: ({
@@ -76,19 +70,15 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         mobileHeight: mobileContainerHeightValue
       });
     }
+    function onYouTubeIdChange(videoIdValue) {
+      var trimedVideoId = videoIdValue.replace("https://youtu.be/", "");
+      setAttributes({
+        youTubeId: trimedVideoId
+      });
+    }
     function onSetPadding(addPaddingValue) {
       setAttributes({
         addPadding: addPaddingValue
-      });
-    }
-    function onOpacityColourChange(newColour) {
-      setAttributes({
-        opacityColour: newColour
-      });
-    }
-    function onChangeOpacityPercent(newPercentage) {
-      setAttributes({
-        backgroundOpacityPercent: newPercentage
       });
     }
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
@@ -96,7 +86,7 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         marginBottom: '40px'
       }
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
-      title: 'Image Container Settings'
+      title: 'Video Settings'
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
       label: "Background height",
       value: attributes.containerHeight,
@@ -105,7 +95,7 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       max: 100,
       step: 5
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
-      label: "Mobile height",
+      label: "Mobile background height",
       value: attributes.mobileHeight,
       onChange: onSetMobileContainerHeight,
       min: 5,
@@ -115,26 +105,12 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       label: "Padding top and bottom (3rem)",
       checked: attributes.addPadding,
       onChange: onSetPadding
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
-      label: "White or Black opacity",
-      value: attributes.opacityColour,
-      options: [{
-        label: 'White',
-        value: 'white'
-      }, {
-        label: 'Black',
-        value: 'black'
-      }],
-      onChange: onOpacityColourChange
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
-      label: "Opacity",
-      value: attributes.backgroundOpacityPercent,
-      onChange: onChangeOpacityPercent,
-      min: 0,
-      max: 100,
-      step: 5
-    }))), ",", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      class: "image-background-block custom-block"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+      label: "YouTube",
+      value: attributes.youTubeId,
+      onChange: onYouTubeIdChange
+    })))), ",", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      class: "video-container custom-block"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
       src: "https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
@@ -150,10 +126,10 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
 
 /***/ }),
 
-/***/ "./includes/block-editor/blocks/image-background/save.js":
-/*!***************************************************************!*\
-  !*** ./includes/block-editor/blocks/image-background/save.js ***!
-  \***************************************************************/
+/***/ "./includes/block-editor/blocks/youtube-video/save.js":
+/*!************************************************************!*\
+  !*** ./includes/block-editor/blocks/youtube-video/save.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -167,7 +143,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/image-background/block.json");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/youtube-video/block.json");
 
 
 
@@ -181,13 +157,40 @@ function save({
   attributes
 }) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps.save(), {
-    "data-class": "image-background",
+    "data-class": "video-container-with-popup",
     "data-container-height": attributes.containerHeight,
     "data-mobile-container-height": attributes.mobileHeight,
-    "data-background-opacity": attributes.opacityColour,
-    "data-top-bottom-padding": attributes.addPadding,
-    "data-opacity-percentage": attributes.backgroundOpacityPercent
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, null));
+    "data-top-bottom-padding": attributes.addPadding
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+    class: "play-icon"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("i", {
+    class: "fa-solid fa-play"
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+    class: "click-to-play"
+  }, "Click to play"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+    class: "video-container"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+    class: "close-video"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("i", {
+    class: "fa-solid fa-xmark"
+  }), " Close"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("iframe", {
+    width: "560",
+    height: "315",
+    src: "https://www.youtube.com/embed/" + attributes.youTubeId + "enablejsapi=1",
+    id: "video_" + attributes.youTubeId,
+    title: "YouTube video player",
+    frameborder: "0",
+    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+    allowfullscreen: true
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("iframe", {
+    width: "560",
+    height: "315",
+    src: "https://www.youtube.com/embed/QPm5WcGEDB4?si=aPwet-SAvwRyvSiB",
+    title: "YouTube video player",
+    frameborder: "0",
+    allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+    allowfullscreen: true
+  }));
 }
 
 /***/ }),
@@ -204,10 +207,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./includes/block-editor/blocks/image-background/style.scss":
-/*!******************************************************************!*\
-  !*** ./includes/block-editor/blocks/image-background/style.scss ***!
-  \******************************************************************/
+/***/ "./includes/block-editor/blocks/youtube-video/style.scss":
+/*!***************************************************************!*\
+  !*** ./includes/block-editor/blocks/youtube-video/style.scss ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -293,13 +296,13 @@ function _extends() {
 
 /***/ }),
 
-/***/ "./includes/block-editor/blocks/image-background/block.json":
-/*!******************************************************************!*\
-  !*** ./includes/block-editor/blocks/image-background/block.json ***!
-  \******************************************************************/
+/***/ "./includes/block-editor/blocks/youtube-video/block.json":
+/*!***************************************************************!*\
+  !*** ./includes/block-editor/blocks/youtube-video/block.json ***!
+  \***************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"addPadding":{"type":"boolean","default":true},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/youtube-video","version":"0.1.0","title":"YouTube Video","category":"buildnbloom","icon":"format-video","description":"Create a full sized image with a play button, when clicked the YouTube video opens out and starts to play in a popup.","supports":{"html":false},"attributes":{"youTubeId":{"type":"string","default":"VkO_7eTE0hU?si=7skp7_zp2lIxL53I"},"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"addPadding":{"type":"boolean","default":true}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/youtube-video.js","editorStyle":"file:../../../../build/youtube-video.css","style":"file:../../../../build/style-youtube-video.css"}');
 
 /***/ })
 
@@ -413,8 +416,8 @@ module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"image-background": 0,
-/******/ 			"style-image-background": 0
+/******/ 			"youtube-video": 0,
+/******/ 			"style-youtube-video": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -464,9 +467,9 @@ module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["style-image-background"], () => (__webpack_require__("./includes/block-editor/blocks/image-background/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["style-youtube-video"], () => (__webpack_require__("./includes/block-editor/blocks/youtube-video/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=image-background.js.map
+//# sourceMappingURL=youtube-video.js.map

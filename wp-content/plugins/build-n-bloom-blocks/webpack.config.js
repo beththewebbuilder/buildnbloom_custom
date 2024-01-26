@@ -4,7 +4,7 @@ module.exports = {
 	...defaultConfig,
 	entry: {
 		'image-background': './includes/block-editor/blocks/image-background',
-		'block-two': './includes/block-editor/blocks/block-two',
+		'youtube-video': './includes/block-editor/blocks/youtube-video',
 		'block-three': './includes/block-editor/blocks/block-three',
 	},
 };

@@ -1,0 +1,96 @@
+@import "../../variables.scss";
+
+.wp-block-build-n-bloom-blocks-youtube-video[data-class*="video-container-with-popup"] {
+    position: relative;
+
+	&[data-top-bottom-padding="true"] {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	@for $i from 0 through 20 {
+		&[data-container-height="#{$i * 5}"] {
+			@media screen and (min-width:$sml-screen-size) {
+				.wp-block-image, img {
+					height: calc($i*5) + vh;
+				}
+			}
+		}
+		&[data-mobile-container-height="#{$i * 5}"] {
+			@media screen and (max-width:$sml-screen-size) {
+				.wp-block-image, img {
+					height: calc($i*5) + vh;
+				}	
+			}
+		}
+	}
+
+    .wp-block-group {
+        position: relative; 
+        cursor: pointer;
+        .wp-block-image {
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .wp-block-heading {
+            position: absolute;
+            color: white;
+            bottom: 10vh;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: $z-index-video-title;
+
+            @media screen and (max-width: $sml-screen-size) {
+                bottom: 10vh;
+            }
+        }
+    }
+    .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 5rem;
+        color: white;
+    }
+    .click-to-play {
+        position: absolute;
+        color: white;
+        bottom: 6vh;
+        width: 100%;
+        text-align: center;       
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    .video-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        padding: 5%;
+        z-index: $z-index-video-modal;
+        iframe {
+            display: block;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+        .close-video {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    iframe {
+        display: none;
+    }
+}

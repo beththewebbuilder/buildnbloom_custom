@@ -55,14 +55,14 @@ registerBlockType(name, {
 		<InspectorControls style={ { marginBottom: '40px'} }>
 			<PanelBody title={'Image Container Settings'}>
 				<RangeControl
-					label="Background screen size"
+					label="Background height"
 					value={ attributes.containerHeight }
 					onChange={ onSetContainerHeight }
 					min={5}
 					max={100}
 					step={5}/>
 				<RangeControl
-					label="Mobile background screen size"
+					label="Mobile height"
 					value={ attributes.mobileHeight }
 					onChange={ onSetMobileContainerHeight }
 					min={5}

@@ -42,7 +42,7 @@ function build_n_bloom_blocks_init() {
 
 	$blocks = array(
         'image-background/',
-		'block-two/',
+		'youtube-video/',
 		'block-three/',
 	);
 

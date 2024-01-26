@@ -1,0 +1,34 @@
+{
+	"apiVersion": 2,
+	"name": "build-n-bloom-blocks/youtube-video",
+	"version": "0.1.0",
+	"title": "YouTube Video",
+	"category": "buildnbloom",
+	"icon": "format-video",
+	"description": "Create a full sized image with a play button, when clicked the YouTube video opens out and starts to play in a popup.",
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+        "youTubeId": {
+			"type": "string",
+			"default": "VkO_7eTE0hU?si=7skp7_zp2lIxL53I"
+		},
+		"containerHeight": {
+			"type": "number",
+			"default": 25
+		},
+		"mobileHeight": {
+			"type": "number",
+			"default": 25
+		},
+		"addPadding": {
+			"type": "boolean",
+			"default": true
+		}
+    },
+	"textdomain": "multiple-blocks",
+	"editorScript": "file:../../../../build/youtube-video.js",
+	"editorStyle": "file:../../../../build/youtube-video.css",
+	"style": "file:../../../../build/style-youtube-video.css"
+}
