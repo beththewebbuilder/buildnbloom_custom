@@ -1,6 +1,6 @@
 {
 	"apiVersion": 2,
-	"name": "twitchstreams/block-two",
+	"name": "build-n-bloom-blocks/block-two",
 	"version": "0.1.0",
 	"title": "Second Block",
 	"category": "design",

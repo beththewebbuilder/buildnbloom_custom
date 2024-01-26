@@ -5,6 +5,6 @@ module.exports = {
 	entry: {
 		'image-background': './includes/block-editor/blocks/image-background',
 		'youtube-video': './includes/block-editor/blocks/youtube-video',
-		'block-three': './includes/block-editor/blocks/block-three',
+		'block-two': './includes/block-editor/blocks/block-two',
 	},
 };

@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, InspectorAdvancedControls, PanelBody } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -30,8 +30,43 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<p {...useBlockProps()}>
-			{__('First Block – hello from the editor!', 'multiple-blocks')}
-		</p>
+		<div { ...useBlockProps() }>
+			{ __(
+				'Inspector Control Groups Block',
+				'inspector-control-groups'
+			) }
+			<InspectorControls group="color">
+				<div className="full-width-control-wrapper">
+					{ __(
+						"I'm in the colors group!",
+						'inspector-control-groups'
+					) }
+				</div>
+			</InspectorControls>
+			<InspectorControls group="typography">
+				<div className="full-width-control-wrapper">
+					{ __(
+						"I'm in the typography group!",
+						'inspector-control-groups'
+					) }
+				</div>
+			</InspectorControls>
+			<InspectorControls group="dimensions">
+				<div className="full-width-control-wrapper">
+					{ __(
+						"I'm in the dimensions group!",
+						'inspector-control-groups'
+					) }
+				</div>
+			</InspectorControls>
+			<InspectorControls group="border">
+				<div className="full-width-control-wrapper">
+					{ __(
+						"I'm in the border group!",
+						'inspector-control-groups'
+					) }
+				</div>
+			</InspectorControls>
+		</div>
 	);
 }

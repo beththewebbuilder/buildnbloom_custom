@@ -13,6 +13,11 @@ import json from './block.json';
 
 const { name, attributes, ...settings } = json;
 
+/** TO DO: Add image 
+ * Add image location (centre, top, bottom)
+ * Add video text location (centre, bottom)
+*/
+ 
 // inner content settings
 const ALLLOWED_BLOCKS = ['core/group'];
 const BLOCK_TEMPLATE = [

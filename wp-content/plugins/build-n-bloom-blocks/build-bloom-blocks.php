@@ -43,7 +43,7 @@ function build_n_bloom_blocks_init() {
 	$blocks = array(
         'image-background/',
 		'youtube-video/',
-		'block-three/',
+		'block-two/',
 	);
 
 	foreach( $blocks as $block ) {
