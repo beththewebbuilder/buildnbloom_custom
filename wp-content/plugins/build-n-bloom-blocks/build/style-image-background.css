@@ -1,381 +1,704 @@
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./includes/block-editor/blocks/image-background/style.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************/
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] {
+/* ADMIN EDIT DISPLAY */
+.image-background-block[data-top-padding="0"] .block-editor-inner-blocks {
+  padding-top: 0rem;
+}
+.image-background-block[data-bottom-padding="0"] .block-editor-inner-blocks {
+  padding-bottom: 0rem;
+}
+.image-background-block[data-top-padding="1"] .block-editor-inner-blocks {
+  padding-top: 1rem;
+}
+.image-background-block[data-bottom-padding="1"] .block-editor-inner-blocks {
+  padding-bottom: 1rem;
+}
+.image-background-block[data-top-padding="2"] .block-editor-inner-blocks {
+  padding-top: 2rem;
+}
+.image-background-block[data-bottom-padding="2"] .block-editor-inner-blocks {
+  padding-bottom: 2rem;
+}
+.image-background-block[data-top-padding="3"] .block-editor-inner-blocks {
+  padding-top: 3rem;
+}
+.image-background-block[data-bottom-padding="3"] .block-editor-inner-blocks {
+  padding-bottom: 3rem;
+}
+.image-background-block[data-top-padding="4"] .block-editor-inner-blocks {
+  padding-top: 4rem;
+}
+.image-background-block[data-bottom-padding="4"] .block-editor-inner-blocks {
+  padding-bottom: 4rem;
+}
+.image-background-block[data-top-padding="5"] .block-editor-inner-blocks {
+  padding-top: 5rem;
+}
+.image-background-block[data-bottom-padding="5"] .block-editor-inner-blocks {
+  padding-bottom: 5rem;
+}
+.image-background-block[data-container-height="0"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 0vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="0"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0);
+}
+.image-background-block[data-opacity-percentage="0"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0);
+}
+.image-background-block[data-container-height="5"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 5vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="5"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.image-background-block[data-opacity-percentage="5"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.image-background-block[data-container-height="10"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 10vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="10"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.image-background-block[data-opacity-percentage="10"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.image-background-block[data-container-height="15"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 15vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="15"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.image-background-block[data-opacity-percentage="15"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.image-background-block[data-container-height="20"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 20vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="20"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.image-background-block[data-opacity-percentage="20"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.image-background-block[data-container-height="25"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 25vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="25"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.image-background-block[data-opacity-percentage="25"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.image-background-block[data-container-height="30"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 30vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="30"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.image-background-block[data-opacity-percentage="30"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.image-background-block[data-container-height="35"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 35vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="35"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.image-background-block[data-opacity-percentage="35"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.image-background-block[data-container-height="40"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 40vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="40"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.image-background-block[data-opacity-percentage="40"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.image-background-block[data-container-height="45"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 45vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="45"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.image-background-block[data-opacity-percentage="45"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.image-background-block[data-container-height="50"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 50vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="50"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.image-background-block[data-opacity-percentage="50"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.image-background-block[data-container-height="55"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 55vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="55"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.55);
+}
+.image-background-block[data-opacity-percentage="55"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.image-background-block[data-container-height="60"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 60vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="60"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.image-background-block[data-opacity-percentage="60"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.image-background-block[data-container-height="65"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 65vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="65"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+.image-background-block[data-opacity-percentage="65"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.image-background-block[data-container-height="70"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 70vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="70"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.image-background-block[data-opacity-percentage="70"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.image-background-block[data-container-height="75"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 75vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="75"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.image-background-block[data-opacity-percentage="75"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.image-background-block[data-container-height="80"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 80vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="80"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.image-background-block[data-opacity-percentage="80"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.image-background-block[data-container-height="85"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 85vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="85"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.image-background-block[data-opacity-percentage="85"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.image-background-block[data-container-height="90"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 90vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="90"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.image-background-block[data-opacity-percentage="90"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.image-background-block[data-container-height="95"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 95vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="95"][data-background-opacity=white] .image-background-content {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.image-background-block[data-opacity-percentage="95"][data-background-opacity=black] .image-background-content {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+.image-background-block[data-container-height="100"] .block-editor-inner-blocks .components-resizable-box__container img {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-background-block[data-opacity-percentage="100"][data-background-opacity=white] .image-background-content {
+  background-color: rgb(255, 255, 255);
+}
+.image-background-block[data-opacity-percentage="100"][data-background-opacity=black] .image-background-content {
+  background-color: rgb(0, 0, 0);
+}
+
+/* FRONT-END DISPLAY */
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display] {
   position: relative;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-top-bottom-padding=true] {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-top-padding="0"] {
+  padding-top: 0rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-bottom-padding="0"] {
+  padding-bottom: 0rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-top-padding="1"] {
+  padding-top: 1rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-bottom-padding="1"] {
+  padding-bottom: 1rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-top-padding="2"] {
+  padding-top: 2rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-bottom-padding="2"] {
+  padding-bottom: 2rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-top-padding="3"] {
+  padding-top: 3rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-bottom-padding="3"] {
+  padding-bottom: 3rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-top-padding="4"] {
+  padding-top: 4rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-bottom-padding="4"] {
+  padding-bottom: 4rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-top-padding="5"] {
+  padding-top: 5rem;
+}
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-bottom-padding="5"] {
+  padding-bottom: 5rem;
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="0"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="0"] img {
     height: 0vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="0"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="0"] img {
     height: 0vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="0"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="0"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="0"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="0"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="5"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="5"] img {
     height: 5vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="5"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="5"] img {
     height: 5vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="5"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="5"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.05);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="5"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="5"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.05);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="10"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="10"] img {
     height: 10vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="10"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="10"] img {
     height: 10vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="10"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="10"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="10"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="10"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="15"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="15"] img {
     height: 15vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="15"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="15"] img {
     height: 15vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="15"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="15"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.15);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="15"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="15"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.15);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="20"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="20"] img {
     height: 20vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="20"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="20"] img {
     height: 20vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="20"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="20"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="20"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="20"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="25"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="25"] img {
     height: 25vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="25"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="25"] img {
     height: 25vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="25"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="25"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.25);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="25"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="25"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.25);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="30"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="30"] img {
     height: 30vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="30"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="30"] img {
     height: 30vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="30"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="30"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.3);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="30"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="30"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.3);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="35"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="35"] img {
     height: 35vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="35"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="35"] img {
     height: 35vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="35"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="35"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.35);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="35"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="35"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.35);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="40"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="40"] img {
     height: 40vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="40"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="40"] img {
     height: 40vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="40"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="40"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.4);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="40"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="40"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.4);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="45"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="45"] img {
     height: 45vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="45"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="45"] img {
     height: 45vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="45"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="45"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.45);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="45"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="45"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.45);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="50"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="50"] img {
     height: 50vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="50"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="50"] img {
     height: 50vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="50"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="50"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.5);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="50"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="50"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="55"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="55"] img {
     height: 55vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="55"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="55"] img {
     height: 55vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="55"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="55"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.55);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="55"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="55"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.55);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="60"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="60"] img {
     height: 60vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="60"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="60"] img {
     height: 60vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="60"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="60"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.6);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="60"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="60"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.6);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="65"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="65"] img {
     height: 65vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="65"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="65"] img {
     height: 65vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="65"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="65"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.65);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="65"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="65"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.65);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="70"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="70"] img {
     height: 70vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="70"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="70"] img {
     height: 70vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="70"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="70"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.7);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="70"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="70"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.7);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="75"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="75"] img {
     height: 75vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="75"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="75"] img {
     height: 75vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="75"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="75"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.75);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="75"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="75"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.75);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="80"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="80"] img {
     height: 80vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="80"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="80"] img {
     height: 80vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="80"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="80"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.8);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="80"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="80"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.8);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="85"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="85"] img {
     height: 85vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="85"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="85"] img {
     height: 85vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="85"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="85"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.85);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="85"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="85"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.85);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="90"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="90"] img {
     height: 90vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="90"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="90"] img {
     height: 90vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="90"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="90"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.9);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="90"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="90"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.9);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="95"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="95"] img {
     height: 95vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="95"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="95"] img {
     height: 95vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="95"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="95"][data-background-opacity=white] .image-background-content {
   background-color: rgba(255, 255, 255, 0.95);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="95"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="95"][data-background-opacity=black] .image-background-content {
   background-color: rgba(0, 0, 0, 0.95);
 }
 @media screen and (min-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-container-height="100"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-container-height="100"] img {
     height: 100vh;
   }
 }
 @media screen and (max-width: 767px) {
-  .wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-mobile-container-height="100"] img {
+  .wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-mobile-container-height="100"] img {
     height: 100vh;
   }
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="100"][data-background-opacity=white] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="100"][data-background-opacity=white] .image-background-content {
   background-color: rgb(255, 255, 255);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background][data-opacity-percentage="100"][data-background-opacity=black] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display][data-opacity-percentage="100"][data-background-opacity=black] .image-background-content {
   background-color: rgb(0, 0, 0);
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] figure {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display] figure {
   margin-bottom: 0;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] figure img {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display] figure img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display] .image-background-content {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content .content-center-container {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display] .image-background-content .content-center-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content .content-center-container .content-center {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display] .image-background-content .content-center-container .content-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content .content-center-container .content-center h1 {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display] .image-background-content .content-center-container .content-center h1 {
   font-size: 6rem;
 }
-.wp-block-build-n-bloom-blocks-image-background[data-class*=image-background] .image-background-content .content-center-container .content-center h2 {
+.wp-block-build-n-bloom-blocks-image-background[data-class*=user-display] .image-background-content .content-center-container .content-center h2 {
   font-size: 3rem;
 }
 

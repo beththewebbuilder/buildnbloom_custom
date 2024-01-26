@@ -1,3 +1,7 @@
+.full-width-control-wrapper {
+	grid-column: 1 / -1;
+}
+
 .custom-block {
     border: 5px solid #0071BC;
     background-color: #CCE3F2;
@@ -23,17 +27,6 @@
 .review-container-block {
     border-color: #EF7C35;
     background-color: #EFAA7F;
-}
-
-.image-background-block {
-    .components-resizable-box__container {
-        width: 100% !important;
-        img {
-            height: 10rem;
-            width: 100%;
-            object-fit: cover;
-        }
-    }
 }
 
 .custom-label {

@@ -1,11 +1,60 @@
 @import "../../variables.scss";
 
-.wp-block-build-n-bloom-blocks-image-background[data-class*="image-background"] {
+/* ADMIN EDIT DISPLAY */
+.image-background-block {
+	@for $i from 0 through 5 {
+		&[data-top-padding="#{$i}"] {
+			.block-editor-inner-blocks {
+				padding-top: $i + rem;
+			}
+		}
+		&[data-bottom-padding="#{$i}"] {
+			.block-editor-inner-blocks {
+				padding-bottom: $i + rem;
+			}
+		}
+	}
+
+	@for $i from 0 through 20 {
+		&[data-container-height="#{$i * 5}"] {
+			.block-editor-inner-blocks {
+				.components-resizable-box__container {
+					img {
+						height: calc($i*5) + vh;
+						width: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+		
+		&[data-opacity-percentage="#{$i * 5}"] {
+			&[data-background-opacity="white"] {
+				.image-background-content {
+					background-color: rgba(255, 255, 255, calc(($i*5)/100));
+				}
+			}
+			&[data-background-opacity="black"] {
+				.image-background-content {
+					background-color: rgba(0, 0, 0, calc(($i*5)/100));
+				}
+			}
+		}
+	}
+
+}
+
+/* FRONT-END DISPLAY */
+.wp-block-build-n-bloom-blocks-image-background[data-class*="user-display"] {
 		position: relative;
 
-		&[data-top-bottom-padding="true"] {
-			margin-top: 3rem;
-			margin-bottom: 3rem;
+		@for $i from 0 through 5 {
+			&[data-top-padding="#{$i}"] {
+				padding-top: $i + rem;
+			}
+			&[data-bottom-padding="#{$i}"] {
+				padding-bottom: $i + rem;
+			}
 		}
 
 		@for $i from 0 through 20 {

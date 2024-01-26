@@ -81,9 +81,14 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         mobileHeight: mobileContainerHeightValue
       });
     }
-    function onSetPadding(addPaddingValue) {
+    function onSetTopPadding(paddingTopValue) {
       setAttributes({
-        addPadding: addPaddingValue
+        paddingTop: paddingTopValue
+      });
+    }
+    function onSetBottomPadding(paddingBottomValue) {
+      setAttributes({
+        paddingBottom: paddingBottomValue
       });
     }
     function onOpacityColourChange(newColour) {
@@ -97,31 +102,31 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       });
     }
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
-      style: {
-        marginBottom: '40px'
-      }
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
-      title: 'Image Container Settings'
+      group: "position"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
-      label: "Background height",
-      value: attributes.containerHeight,
-      onChange: onSetContainerHeight,
-      min: 5,
-      max: 100,
-      step: 5
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
-      label: "Mobile height",
-      value: attributes.mobileHeight,
-      onChange: onSetMobileContainerHeight,
-      min: 5,
-      max: 100,
-      step: 5
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToggleControl, {
-      label: "Padding top and bottom (3rem)",
-      checked: attributes.addPadding,
-      onChange: onSetPadding
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
-      label: "White or Black opacity",
+      label: "Padding top (rem)",
+      value: attributes.paddingTop,
+      onChange: onSetTopPadding,
+      min: 0,
+      max: 5,
+      step: 1
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+      label: "Padding bottom (rem)",
+      value: attributes.paddingBottom,
+      onChange: onSetBottomPadding,
+      min: 0,
+      max: 5,
+      step: 1
+    }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
+      group: "color"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
+      label: "Select opacity colour",
       value: attributes.opacityColour,
       options: [{
         label: 'White',
@@ -131,15 +136,43 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         value: 'black'
       }],
       onChange: onOpacityColourChange
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
-      label: "Opacity",
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+      label: "Opacity %",
       value: attributes.backgroundOpacityPercent,
       onChange: onChangeOpacityPercent,
       min: 0,
       max: 100,
       step: 5
-    }))), ",", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      class: "image-background-block custom-block"
+    }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
+      group: "dimensions"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+      label: "Desktop height",
+      value: attributes.containerHeight,
+      onChange: onSetContainerHeight,
+      min: 5,
+      max: 100,
+      step: 5
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
+      label: "Mobile height",
+      value: attributes.mobileHeight,
+      onChange: onSetMobileContainerHeight,
+      min: 5,
+      max: 100,
+      step: 5
+    }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      class: "image-background-block custom-block",
+      "data-container-height": attributes.containerHeight,
+      "data-mobile-container-height": attributes.mobileHeight,
+      "data-background-opacity": attributes.opacityColour,
+      "data-top-padding": attributes.paddingTop,
+      "data-bottom-padding": attributes.paddingBottom,
+      "data-opacity-percentage": attributes.backgroundOpacityPercent
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
       src: "https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
@@ -186,11 +219,12 @@ function save({
   attributes
 }) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps.save(), {
-    "data-class": "image-background",
+    "data-class": "user-display",
     "data-container-height": attributes.containerHeight,
     "data-mobile-container-height": attributes.mobileHeight,
     "data-background-opacity": attributes.opacityColour,
-    "data-top-bottom-padding": attributes.addPadding,
+    "data-top-padding": attributes.paddingTop,
+    "data-bottom-padding": attributes.paddingBottom,
     "data-opacity-percentage": attributes.backgroundOpacityPercent
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, null));
 }
@@ -304,7 +338,7 @@ function _extends() {
   \******************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"addPadding":{"type":"boolean","default":true},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"paddingTop":{"type":"number","default":3},"paddingBottom":{"type":"number","default":3},"opacityColour":{"type":"string","default":"white"},"desktopImagePosition":{"type":"string","default":"middle"},"mobileImagePosition":{"type":"string","default":"middle"}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
 
 /***/ })
 

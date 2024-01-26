@@ -8,11 +8,12 @@ export default function save({attributes}) {
 
 	return (
 		<div {...useBlockProps.save()} 
-		data-class={"image-background"} 
+		data-class={"user-display"} 
 		data-container-height={attributes.containerHeight} 
 		data-mobile-container-height={attributes.mobileHeight}
 		data-background-opacity={attributes.opacityColour}
-		data-top-bottom-padding={attributes.addPadding}
+		data-top-padding={attributes.paddingTop}
+		data-bottom-padding={attributes.paddingBottom}
 		data-opacity-percentage={attributes.backgroundOpacityPercent}>
 			<InnerBlocks.Content/>
 		</div>

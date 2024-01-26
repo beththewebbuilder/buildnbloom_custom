@@ -45,8 +45,11 @@ registerBlockType(name, {
 	function onSetMobileContainerHeight( mobileContainerHeightValue ) {
 		setAttributes( { mobileHeight: mobileContainerHeightValue } );
 	}
-	function onSetPadding( addPaddingValue ) {
-		setAttributes( { addPadding: addPaddingValue } );
+	function onSetTopPadding( paddingTopValue ) {
+		setAttributes( { paddingTop: paddingTopValue } );
+	}
+	function onSetBottomPadding( paddingBottomValue ) {
+		setAttributes( { paddingBottom: paddingBottomValue } );
 	}
 	function onOpacityColourChange( newColour ) {
         setAttributes( { opacityColour: newColour } )
@@ -56,48 +59,84 @@ registerBlockType(name, {
 	}
 
 	return (
-		<div {...useBlockProps()}>
-		<InspectorControls style={ { marginBottom: '40px'} }>
-			<PanelBody title={'Image Container Settings'}>
-				<RangeControl
-					label="Background height"
-					value={ attributes.containerHeight }
-					onChange={ onSetContainerHeight }
-					min={5}
-					max={100}
-					step={5}/>
-				<RangeControl
-					label="Mobile height"
-					value={ attributes.mobileHeight }
-					onChange={ onSetMobileContainerHeight }
-					min={5}
-					max={100}
-					step={5}/>
-				<ToggleControl
-					label="Padding top and bottom (3rem)"
-					checked={ attributes.addPadding }
-					onChange={ onSetPadding }
-				/>
-				<SelectControl
-					label="White or Black opacity"
-					value={ attributes.opacityColour }
-					options={[
-						{ label: 'White', value: 'white'},
-						{ label: 'Black', value: 'black' }
-					]}
-					onChange={ onOpacityColourChange }
-				/>
-				<RangeControl
-					label="Opacity"
-					value={ attributes.backgroundOpacityPercent }
-					onChange={ onChangeOpacityPercent }
-					min={0}
-					max={100}
-					step={5}/>
-			</PanelBody>
-		</InspectorControls>,
+		<div { ...useBlockProps() }>
+			<InspectorControls group="position">
+				<div className="full-width-control-wrapper">
+					<RangeControl
+						label="Padding top (rem)"
+						value={ attributes.paddingTop }
+						onChange={ onSetTopPadding }
+						min={0}
+						max={5}
+						step={1} />
+				</div>
+				<div className="full-width-control-wrapper">
+					<RangeControl
+						label="Padding bottom (rem)"
+						value={ attributes.paddingBottom }
+						onChange={ onSetBottomPadding }
+						min={0}
+						max={5}
+						step={1} />
+				</div>
+			</InspectorControls>
+			<InspectorControls group="color">
+				<div className="full-width-control-wrapper">
+					<SelectControl
+						label="Select opacity colour"
+						value={ attributes.opacityColour }
+						options={[
+							{ label: 'White', value: 'white'},
+							{ label: 'Black', value: 'black' }
+						]}
+						onChange={ onOpacityColourChange }/>
+				</div>
+				<div className="full-width-control-wrapper">
+					<RangeControl
+						label="Opacity %"
+						value={ attributes.backgroundOpacityPercent }
+						onChange={ onChangeOpacityPercent }
+						min={0}
+						max={100}
+						step={5}/>
+				</div>
+			</InspectorControls>
 
-        <div class="image-background-block custom-block">
+			<InspectorControls group="dimensions">
+				<div className="full-width-control-wrapper">
+					<RangeControl
+						label="Desktop height"
+						value={ attributes.containerHeight }
+						onChange={ onSetContainerHeight }
+						min={5}
+						max={100}
+						step={5}/>
+				</div>
+				<div className="full-width-control-wrapper">
+					<RangeControl
+						label="Mobile height"
+						value={ attributes.mobileHeight }
+						onChange={ onSetMobileContainerHeight }
+						min={5}
+						max={100}
+						step={5}/>
+				</div>				
+			</InspectorControls>
+		
+		{/* <InspectorControls style={ { marginBottom: '40px'} }>
+			<PanelBody title={'Image Container Settings'}>
+				
+				
+			</PanelBody>
+		</InspectorControls>, */}
+
+        <div class="image-background-block custom-block"
+			data-container-height={attributes.containerHeight} 
+			data-mobile-container-height={attributes.mobileHeight}
+			data-background-opacity={attributes.opacityColour}
+			data-top-padding={attributes.paddingTop}
+			data-bottom-padding={attributes.paddingBottom}
+			data-opacity-percentage={attributes.backgroundOpacityPercent}>
           <img src="https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"/>
           <InnerBlocks 
             allowedBlocks={ ALLLOWED_BLOCKS } 
