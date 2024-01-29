@@ -179,6 +179,8 @@ registerBlockType(name, {
 						step={5}/>
 				</div>				
 			</InspectorControls>
+
+			{/* How to add media: https://awhitepixel.com/wordpress-gutenberg-add-image-select-custom-block/ */}
 		
 		<InspectorControls>
 			<MediaUploadCheck>
