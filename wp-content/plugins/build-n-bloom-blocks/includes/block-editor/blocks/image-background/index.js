@@ -22,8 +22,8 @@ const { name, attributes, ...settings } = json;
 const ALLLOWED_BLOCKS = ['core/group'];
 const BLOCK_TEMPLATE = [
   ['core/group', {}, [
-    ['core/image', { className: 'no-padding' }],
-    ['core/group', { className: 'image-background-content absolute-cover' }, [
+    ['core/image', { className: 'desktop-image' }],
+    ['core/group', { className: 'image-background-content' }, [
         ['core/group', { className: 'content-center-container' }, [
 			['core/group', { className: 'content-center' }, [
 				['core/heading', { level: 1, placeholder: 'Main large heading'}],

@@ -51,9 +51,9 @@ const {
 // inner content settings
 const ALLLOWED_BLOCKS = ['core/group'];
 const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
-  className: 'no-padding'
+  className: 'desktop-image'
 }], ['core/group', {
-  className: 'image-background-content absolute-cover'
+  className: 'image-background-content'
 }, [['core/group', {
   className: 'content-center-container'
 }, [['core/group', {
