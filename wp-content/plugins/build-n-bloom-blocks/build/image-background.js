@@ -21,8 +21,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./includes/block-editor/blocks/image-background/style.scss");
 /* harmony import */ var _block_editor_group_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-editor-group.scss */ "./includes/block-editor/block-editor-group.scss");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./save */ "./includes/block-editor/blocks/image-background/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/image-background/block.json");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/image-background/editor.scss");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./save */ "./includes/block-editor/blocks/image-background/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/image-background/block.json");
+
 
 
 
@@ -40,10 +42,9 @@ const {
   name,
   attributes,
   ...settings
-} = _block_json__WEBPACK_IMPORTED_MODULE_8__;
+} = _block_json__WEBPACK_IMPORTED_MODULE_9__;
 
 /** TO DO: Add image 
- * Add image location (centre, top, bottom)
  * Add video text location (centre, bottom)
 */
 
@@ -63,7 +64,9 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
 }], ['core/heading', {
   level: 2,
   placeholder: 'Subheading'
-}], ['core/button']]]]]]]]]];
+}], ['core/button']]]]]]], ['core/image', {
+  className: 'mobile-option'
+}]]]];
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(name, {
   ...settings,
   edit: ({
@@ -101,6 +104,26 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         backgroundOpacityPercent: newPercentage
       });
     }
+    function onChangeDesktopImagePosition(newDesktopPosition) {
+      setAttributes({
+        desktopImagePosition: newDesktopPosition
+      });
+    }
+    function onChangeMobileImagePosition(newMobilePosition) {
+      setAttributes({
+        mobileImagePosition: newMobilePosition
+      });
+    }
+    function onChangeDesktopContentPosition(newDesktopContentPosition) {
+      setAttributes({
+        desktopContentPosition: newDesktopContentPosition
+      });
+    }
+    function onChangeMobileContentPosition(newMobileContentPosition) {
+      setAttributes({
+        mobileContentPosition: newMobileContentPosition
+      });
+    }
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
       group: "position"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -121,6 +144,70 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       min: 0,
       max: 5,
       step: 1
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
+      label: "Image postition (desktop)",
+      value: attributes.desktopImagePosition,
+      options: [{
+        label: 'Top',
+        value: 'top'
+      }, {
+        label: 'Middle',
+        value: 'middle'
+      }, {
+        label: 'Bottom',
+        value: 'bottom'
+      }],
+      onChange: onChangeDesktopImagePosition
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
+      label: "Image postition (mobile)",
+      value: attributes.mobileImagePosition,
+      options: [{
+        label: 'Top',
+        value: 'top'
+      }, {
+        label: 'Middle',
+        value: 'middle'
+      }, {
+        label: 'Bottom',
+        value: 'bottom'
+      }],
+      onChange: onChangeMobileImagePosition
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
+      label: "Content postition (desktop)",
+      value: attributes.desktopContentPosition,
+      options: [{
+        label: 'Top',
+        value: 'top'
+      }, {
+        label: 'Middle',
+        value: 'middle'
+      }, {
+        label: 'Bottom',
+        value: 'bottom'
+      }],
+      onChange: onChangeDesktopContentPosition
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
+      label: "Content postition (mobile)",
+      value: attributes.mobileContentPosition,
+      options: [{
+        label: 'Top',
+        value: 'top'
+      }, {
+        label: 'Middle',
+        value: 'middle'
+      }, {
+        label: 'Bottom',
+        value: 'bottom'
+      }],
+      onChange: onChangeMobileContentPosition
     }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
       group: "color"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -172,7 +259,11 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       "data-background-opacity": attributes.opacityColour,
       "data-top-padding": attributes.paddingTop,
       "data-bottom-padding": attributes.paddingBottom,
-      "data-opacity-percentage": attributes.backgroundOpacityPercent
+      "data-opacity-percentage": attributes.backgroundOpacityPercent,
+      "data-desktop-image-position": attributes.desktopImagePosition,
+      "data-mobile-image-position": attributes.mobileImagePosition,
+      "data-desktop-content-position": attributes.desktopContentPosition,
+      "data-mobile-content-position": attributes.mobileContentPosition
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
       src: "https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
@@ -183,7 +274,7 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       renderAppender: _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.DefaultBlockAppender
     })));
   },
-  save: _save__WEBPACK_IMPORTED_MODULE_7__["default"]
+  save: _save__WEBPACK_IMPORTED_MODULE_8__["default"]
 });
 
 /***/ }),
@@ -225,7 +316,11 @@ function save({
     "data-background-opacity": attributes.opacityColour,
     "data-top-padding": attributes.paddingTop,
     "data-bottom-padding": attributes.paddingBottom,
-    "data-opacity-percentage": attributes.backgroundOpacityPercent
+    "data-opacity-percentage": attributes.backgroundOpacityPercent,
+    "data-desktop-image-position": attributes.desktopImagePosition,
+    "data-mobile-image-position": attributes.mobileImagePosition,
+    "data-desktop-content-position": attributes.desktopContentPosition,
+    "data-mobile-content-position": attributes.mobileContentPosition
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.Content, null));
 }
 
@@ -235,6 +330,18 @@ function save({
 /*!*******************************************************!*\
   !*** ./includes/block-editor/block-editor-group.scss ***!
   \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/blocks/image-background/editor.scss":
+/*!*******************************************************************!*\
+  !*** ./includes/block-editor/blocks/image-background/editor.scss ***!
+  \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -338,7 +445,7 @@ function _extends() {
   \******************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"paddingTop":{"type":"number","default":3},"paddingBottom":{"type":"number","default":3},"opacityColour":{"type":"string","default":"white"},"desktopImagePosition":{"type":"string","default":"middle"},"mobileImagePosition":{"type":"string","default":"middle"}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"paddingTop":{"type":"number","default":3},"paddingBottom":{"type":"number","default":3},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50},"desktopImagePosition":{"type":"string","default":"middle"},"mobileImagePosition":{"type":"string","default":"middle"},"desktopContentPosition":{"type":"string","default":"middle"},"mobileContentPosition":{"type":"string","default":"middle"}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
 
 /***/ })
 

@@ -14,7 +14,11 @@ export default function save({attributes}) {
 		data-background-opacity={attributes.opacityColour}
 		data-top-padding={attributes.paddingTop}
 		data-bottom-padding={attributes.paddingBottom}
-		data-opacity-percentage={attributes.backgroundOpacityPercent}>
+		data-opacity-percentage={attributes.backgroundOpacityPercent}
+		data-desktop-image-position={attributes.desktopImagePosition}
+		data-mobile-image-position={attributes.mobileImagePosition}
+		data-desktop-content-position={attributes.desktopContentPosition}
+		data-mobile-content-position={attributes.mobileContentPosition}>
 			<InnerBlocks.Content/>
 		</div>
 	);

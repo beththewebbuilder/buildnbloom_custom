@@ -30,11 +30,23 @@
 			"type": "string",
 			"default": "white"
 		},
+		"backgroundOpacityPercent": {
+			"type": "number",
+			"default": 50
+		},
 		"desktopImagePosition": {
 			"type": "string",
 			"default": "middle"
 		},
 		"mobileImagePosition": {
+			"type": "string",
+			"default": "middle"
+		},
+		"desktopContentPosition": {
+			"type": "string",
+			"default": "middle"
+		},
+		"mobileContentPosition": {
 			"type": "string",
 			"default": "middle"
 		}

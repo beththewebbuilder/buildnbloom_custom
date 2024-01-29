@@ -4,6 +4,7 @@ import { useBlockProps, InspectorControls, InnerBlocks } from '@wordpress/block-
 import { PanelBody, PanelRow, SelectControl, Button, ButtonGroup, ColorPalette, RangeControl, ToggleControl } from '@wordpress/components';
 import './style.scss';
 import '../../block-editor-group.scss';
+import './editor.scss';
 
 /**
  * Internal dependencies
@@ -14,7 +15,6 @@ import json from './block.json';
 const { name, attributes, ...settings } = json;
 
 /** TO DO: Add image 
- * Add image location (centre, top, bottom)
  * Add video text location (centre, bottom)
 */
  
@@ -31,7 +31,8 @@ const BLOCK_TEMPLATE = [
 				['core/button'],
 			]]
         ]]
-    ]]
+    ]],
+	['core/image', { className: 'mobile-option' }],
 ]]];
 
 registerBlockType(name, {
@@ -57,6 +58,18 @@ registerBlockType(name, {
 	function onChangeOpacityPercent( newPercentage ) {
 		setAttributes( { backgroundOpacityPercent: newPercentage } );
 	}
+	function onChangeDesktopImagePosition( newDesktopPosition ) {
+		setAttributes( { desktopImagePosition: newDesktopPosition } );
+	}
+	function onChangeMobileImagePosition( newMobilePosition ) {
+		setAttributes( { mobileImagePosition: newMobilePosition } );
+	}
+	function onChangeDesktopContentPosition( newDesktopContentPosition ) {
+		setAttributes( { desktopContentPosition: newDesktopContentPosition } );
+	}
+	function onChangeMobileContentPosition( newMobileContentPosition ) {
+		setAttributes( { mobileContentPosition: newMobileContentPosition } );
+	}
 
 	return (
 		<div { ...useBlockProps() }>
@@ -78,6 +91,50 @@ registerBlockType(name, {
 						min={0}
 						max={5}
 						step={1} />
+				</div>
+				<div className="full-width-control-wrapper">
+					<SelectControl
+						label="Image postition (desktop)"
+						value={ attributes.desktopImagePosition }
+						options={[
+							{ label: 'Top', value: 'top' },
+							{ label: 'Middle', value: 'middle' },
+							{ label: 'Bottom', value: 'bottom' }
+						]}
+						onChange={ onChangeDesktopImagePosition } />
+				</div>
+				<div className="full-width-control-wrapper">
+					<SelectControl
+						label="Image postition (mobile)"
+						value={ attributes.mobileImagePosition }
+						options={[
+							{ label: 'Top', value: 'top' },
+							{ label: 'Middle', value: 'middle' },
+							{ label: 'Bottom', value: 'bottom' }
+						]}
+						onChange={ onChangeMobileImagePosition } />
+				</div>
+				<div className="full-width-control-wrapper">
+					<SelectControl
+						label="Content postition (desktop)"
+						value={ attributes.desktopContentPosition }
+						options={[
+							{ label: 'Top', value: 'top' },
+							{ label: 'Middle', value: 'middle' },
+							{ label: 'Bottom', value: 'bottom' }
+						]}
+						onChange={ onChangeDesktopContentPosition } />
+				</div>
+				<div className="full-width-control-wrapper">
+					<SelectControl
+						label="Content postition (mobile)"
+						value={ attributes.mobileContentPosition }
+						options={[
+							{ label: 'Top', value: 'top' },
+							{ label: 'Middle', value: 'middle' },
+							{ label: 'Bottom', value: 'bottom' }
+						]}
+						onChange={ onChangeMobileContentPosition } />
 				</div>
 			</InspectorControls>
 			<InspectorControls group="color">
@@ -136,7 +193,11 @@ registerBlockType(name, {
 			data-background-opacity={attributes.opacityColour}
 			data-top-padding={attributes.paddingTop}
 			data-bottom-padding={attributes.paddingBottom}
-			data-opacity-percentage={attributes.backgroundOpacityPercent}>
+			data-opacity-percentage={attributes.backgroundOpacityPercent}
+			data-desktop-image-position={attributes.desktopImagePosition}
+			data-mobile-image-position={attributes.mobileImagePosition}
+			data-desktop-content-position={attributes.desktopContentPosition}
+			data-mobile-content-position={attributes.mobileContentPosition}>
           <img src="https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"/>
           <InnerBlocks 
             allowedBlocks={ ALLLOWED_BLOCKS } 
