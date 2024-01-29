@@ -1,6 +1,11 @@
 @import "../../variables.scss";
 /* ADMIN EDIT DISPLAY */
 .image-background-block {
+
+	.desktop-image {
+		height: 25vh;
+	}
+	
 	@for $i from 0 through 5 {
 		&[data-top-padding="#{$i}"] {
 			.block-editor-inner-blocks {

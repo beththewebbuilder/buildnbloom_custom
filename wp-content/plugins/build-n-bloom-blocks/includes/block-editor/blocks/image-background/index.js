@@ -1,7 +1,7 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls, InnerBlocks } from '@wordpress/block-editor';
-import { PanelBody, PanelRow, SelectControl, Button, ButtonGroup, ColorPalette, RangeControl, ToggleControl } from '@wordpress/components';
+import { useBlockProps, InspectorControls, InnerBlocks, MediaUploadCheck } from '@wordpress/block-editor';
+import { SelectControl, RangeControl, MediaUpload } from '@wordpress/components';
 import './style.scss';
 import '../../block-editor-group.scss';
 import './editor.scss';
@@ -180,12 +180,31 @@ registerBlockType(name, {
 				</div>				
 			</InspectorControls>
 		
-		{/* <InspectorControls style={ { marginBottom: '40px'} }>
-			<PanelBody title={'Image Container Settings'}>
-				
-				
-			</PanelBody>
-		</InspectorControls>, */}
+		<InspectorControls>
+			<MediaUploadCheck>
+				<MediaUpload
+					onSelect={onSelectMedia}
+					value={attributes.mediaId}
+					allowedTypes={ ['image'] }
+					render={({open}) => (
+						<Button 
+							className={attributes.mediaId == 0 ? 'editor-post-featured-image__toggle' : 'editor-post-featured-image__preview'}
+							onClick={open}
+						>
+							{attributes.mediaId == 0 && __('Choose an image', 'awp')}
+							{props.media != undefined && 
+									<ResponsiveWrapper
+									naturalWidth={ props.media.media_details.width }
+								naturalHeight={ props.media.media_details.height }
+								>
+									<img src={props.media.source_url} />
+								</ResponsiveWrapper>
+								}
+						</Button>
+					)}
+				/>
+			</MediaUploadCheck>
+		</InspectorControls>,
 
         <div class="image-background-block custom-block"
 			data-container-height={attributes.containerHeight} 
