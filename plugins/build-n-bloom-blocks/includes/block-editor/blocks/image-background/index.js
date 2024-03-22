@@ -70,6 +70,9 @@ registerBlockType(name, {
 	function onChangeMobileContentPosition( newMobileContentPosition ) {
 		setAttributes( { mobileContentPosition: newMobileContentPosition } );
 	}
+	function onSelectMedia() {
+		
+	}
 
 	return (
 		<div { ...useBlockProps() }>

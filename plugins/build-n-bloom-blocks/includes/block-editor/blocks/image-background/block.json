@@ -49,6 +49,14 @@
 		"mobileContentPosition": {
 			"type": "string",
 			"default": "middle"
+		},
+		"desktopImageId": {
+			"type": "number",
+			"default": 0
+		},
+		"desktopImageUrl": {
+			"type": "string",
+			"default": ""
 		}
     },
 	"textdomain": "multiple-blocks",

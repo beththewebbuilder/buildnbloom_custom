@@ -124,6 +124,7 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         mobileContentPosition: newMobileContentPosition
       });
     }
+    function onSelectMedia() {}
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
       group: "position"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -460,7 +461,7 @@ function _extends() {
   \******************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"paddingTop":{"type":"number","default":3},"paddingBottom":{"type":"number","default":3},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50},"desktopImagePosition":{"type":"string","default":"middle"},"mobileImagePosition":{"type":"string","default":"middle"},"desktopContentPosition":{"type":"string","default":"middle"},"mobileContentPosition":{"type":"string","default":"middle"}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"paddingTop":{"type":"number","default":3},"paddingBottom":{"type":"number","default":3},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50},"desktopImagePosition":{"type":"string","default":"middle"},"mobileImagePosition":{"type":"string","default":"middle"},"desktopContentPosition":{"type":"string","default":"middle"},"mobileContentPosition":{"type":"string","default":"middle"},"desktopImageId":{"type":"number","default":0},"desktopImageUrl":{"type":"string","default":""}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
 
 /***/ })
 
