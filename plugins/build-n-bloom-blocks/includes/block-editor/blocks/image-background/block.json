@@ -57,6 +57,10 @@
 		"desktopImageUrl": {
 			"type": "string",
 			"default": ""
+		},
+		"desktopImageTitle": {
+			"type": "string",
+			"default": ""
 		}
     },
 	"textdomain": "multiple-blocks",

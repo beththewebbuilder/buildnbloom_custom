@@ -1,7 +1,8 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
-import { useBlockProps, InspectorControls, InnerBlocks, MediaUploadCheck } from '@wordpress/block-editor';
-import { SelectControl, RangeControl, MediaUpload } from '@wordpress/components';
+import { useBlockProps, InspectorControls, InnerBlocks, MediaUploadCheck, MediaUpload } from '@wordpress/block-editor';
+import { SelectControl, RangeControl, Button } from '@wordpress/components';
+import { Fragment } from '@wordpress/element';
 import './style.scss';
 import '../../block-editor-group.scss';
 import './editor.scss';
@@ -70,13 +71,57 @@ registerBlockType(name, {
 	function onChangeMobileContentPosition( newMobileContentPosition ) {
 		setAttributes( { mobileContentPosition: newMobileContentPosition } );
 	}
-	function onSelectMedia() {
-		
+	function onSelectMedia(newImage) {
+		setAttributes({
+			desktopImageId: newImage.id,
+			desktopImageTitle: newImage.title,
+			desktopImageUrl: newImage.url
+		});
+	}
+	function removeMedia() {
+		setAttributes({
+			desktopImageId: 0,
+			desktopImageTitle: "",
+			desktopImageUrl: ""
+		});
 	}
 
 	return (
 		<div { ...useBlockProps() }>
+		<Fragment>
 			<InspectorControls group="position">
+				<div className="full-width-control-wrapper">
+					<MediaUploadCheck>
+						<MediaUpload
+							title="Select desktop background"
+							value={ attributes.desktopImageId }
+							onSelect={ onSelectMedia }
+							render={ ({open}) => (
+							<button onClick={open}>
+								{ attributes.desktopImageId == 0 && __('Choose an image', 'awp')}
+							</button>
+							)}/>
+					</MediaUploadCheck>
+					{attributes.desktopImageId != 0 && 
+							<MediaUploadCheck>
+								<MediaUpload
+									title={__('Replace image', 'awp')}
+									value={attributes.desktopImageId}
+									onSelect={onSelectMedia}
+									allowedTypes={['image']}
+									render={({open}) => (
+										<Button onClick={open} isDefault isLarge>{__('Replace image', 'awp')}</Button>
+									)}
+								/>
+							</MediaUploadCheck>
+						}
+						{attributes.desktopImageId != 0 && 
+							<MediaUploadCheck>
+								<Button onClick={removeMedia} isLink isDestructive>{__('Remove image', 'awp')}</Button>
+							</MediaUploadCheck>
+						}
+				</div>
+
 				<div className="full-width-control-wrapper">
 					<RangeControl
 						label="Padding top (rem)"
@@ -140,6 +185,8 @@ registerBlockType(name, {
 						onChange={ onChangeMobileContentPosition } />
 				</div>
 			</InspectorControls>
+			
+			
 			<InspectorControls group="color">
 				<div className="full-width-control-wrapper">
 					<SelectControl
@@ -182,34 +229,10 @@ registerBlockType(name, {
 						step={5}/>
 				</div>				
 			</InspectorControls>
+		</Fragment>
 
 			{/* How to add media: https://awhitepixel.com/wordpress-gutenberg-add-image-select-custom-block/ */}
-		
-		<InspectorControls>
-			<MediaUploadCheck>
-				<MediaUpload
-					onSelect={onSelectMedia}
-					value={attributes.mediaId}
-					allowedTypes={ ['image'] }
-					render={({open}) => (
-						<Button 
-							className={attributes.mediaId == 0 ? 'editor-post-featured-image__toggle' : 'editor-post-featured-image__preview'}
-							onClick={open}
-						>
-							{attributes.mediaId == 0 && __('Choose an image', 'awp')}
-							{props.media != undefined && 
-									<ResponsiveWrapper
-									naturalWidth={ props.media.media_details.width }
-								naturalHeight={ props.media.media_details.height }
-								>
-									<img src={props.media.source_url} />
-								</ResponsiveWrapper>
-								}
-						</Button>
-					)}
-				/>
-			</MediaUploadCheck>
-		</InspectorControls>,
+	
 
         <div class="image-background-block custom-block"
 			data-container-height={attributes.containerHeight} 

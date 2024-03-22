@@ -22,12 +22,23 @@ It was decided that all the blocks would be contained within the one plugin so t
 The `build` folder is what is produced by running the npm package command using wp-scripts. This does not need to be touched.
 
 The `includes` folder is where the development starts. All the blocks are listed in `block-editor` > `blocks`. Each block folder contains:
-- block.json
-- index.js
-- save.js
-- style.scss
-
 
 #### block.json
+
+This file contains the settings for the block, including all the attributes.
+
+#### editor.scss
+
+This file contains the settings for the block, including all the attributes.
+
+#### index.js
+
+This file contains the settings for the block, including all the attributes.
+
+#### save.js
+
+This file contains the settings for the block, including all the attributes.
+
+#### style.scss
 
 This file contains the settings for the block, including all the attributes.
