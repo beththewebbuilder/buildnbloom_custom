@@ -23,7 +23,6 @@ const { name, attributes, ...settings } = json;
 const ALLLOWED_BLOCKS = ['core/group'];
 const BLOCK_TEMPLATE = [
   ['core/group', {}, [
-    ['core/image', { className: 'desktop-image' }],
     ['core/group', { className: 'image-background-content' }, [
         ['core/group', { className: 'content-center-container' }, [
 			['core/group', { className: 'content-center' }, [
@@ -33,7 +32,6 @@ const BLOCK_TEMPLATE = [
 			]]
         ]]
     ]],
-	['core/image', { className: 'mobile-option' }],
 ]]];
 
 registerBlockType(name, {
@@ -100,13 +98,17 @@ registerBlockType(name, {
 		});
 	}
 
+	const blockStyle = {
+		backgroundImage: attributes.desktopImageUrl != '' ? 'url("' + attributes.desktopImageUrl + '")' : 'none'
+	};
+
 	return (
 		<div { ...useBlockProps() }>
 		<Fragment>
 			<InspectorControls group="position">
 				<div className="full-width-control-wrapper">
 					<div class="custom-label">Desktop background image</div>
-					<div>{attributes.desktopImageTitle}</div>
+					<div><em>{attributes.desktopImageTitle}</em></div>
 					{attributes.desktopImageId == 0 &&
 						<MediaUploadCheck>
 							<MediaUpload
@@ -145,7 +147,7 @@ registerBlockType(name, {
 
 				<div className="full-width-control-wrapper">
 					<div class="custom-label">Mobile background image</div>
-					<div>{ attributes.mobileImageTitle }</div>
+					<div><em>{ attributes.mobileImageTitle }</em></div>
 					{ attributes.mobileImageId == 0 &&
 						<MediaUploadCheck>
 							<MediaUpload
@@ -290,28 +292,35 @@ registerBlockType(name, {
 			</InspectorControls>
 		</Fragment>
 
-			{/* How to add media: https://awhitepixel.com/wordpress-gutenberg-add-image-select-custom-block/ */}
-	
-
-        <div class="image-background-block custom-block"
-			data-container-height={attributes.containerHeight} 
+        <div class="image-background-block custom-block" 
 			data-mobile-container-height={attributes.mobileHeight}
-			data-background-opacity={attributes.opacityColour}
 			data-top-padding={attributes.paddingTop}
 			data-bottom-padding={attributes.paddingBottom}
-			data-opacity-percentage={attributes.backgroundOpacityPercent}
-			data-desktop-image-position={attributes.desktopImagePosition}
+			
 			data-mobile-image-position={attributes.mobileImagePosition}
 			data-desktop-content-position={attributes.desktopContentPosition}
 			data-mobile-content-position={attributes.mobileContentPosition}>
-          <img src="https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"/>
-          <InnerBlocks 
-            allowedBlocks={ ALLLOWED_BLOCKS } 
-            template={ BLOCK_TEMPLATE } 
-            templateLock="all"
-            templateInsertUpdatesSelection={false}
-            renderAppender={ InnerBlocks.DefaultBlockAppender }
-          />
+
+			<img src="https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"/>
+
+			<div class="background-image" 
+				style={blockStyle}
+				data-container-height={attributes.containerHeight}
+				data-desktop-image-position={attributes.desktopImagePosition}>
+
+				<div class="image-overlay"
+					data-background-opacity={attributes.opacityColour}
+					data-opacity-percentage={attributes.backgroundOpacityPercent}>
+				</div>
+
+				<InnerBlocks 
+					allowedBlocks={ ALLLOWED_BLOCKS } 
+					template={ BLOCK_TEMPLATE } 
+					templateLock="all"
+					templateInsertUpdatesSelection={false}
+					renderAppender={ InnerBlocks.DefaultBlockAppender } />
+			</div>
+			
         </div>
 		</div>
 	);

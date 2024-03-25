@@ -6,6 +6,44 @@
 		height: 25vh;
 	}
 	
+	.background-image {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+
+		@for $i from 0 through 20 {
+			&[data-container-height="#{$i * 5}"] {
+				height: calc($i*5) + vh;
+			}
+		}
+
+		&[data-desktop-image-position="top"] {
+			background-position: "top center";
+		}
+		&[data-desktop-image-position="middle"] {
+			background-position: "middle center";
+		}
+		&[data-desktop-image-position="bottom"] {
+			background-position: "bottom center";
+		}
+
+		.image-overlay {
+			height: 100%;
+			width: 100%;
+
+			@for $i from 0 through 20 {
+				&[data-opacity-percentage="#{$i * 5}"] {
+					&[data-background-opacity="white"] {
+						background-color: rgba(255, 255, 255, calc(($i*5)/100));
+					}
+					&[data-background-opacity="black"] {
+						background-color: rgba(0, 0, 0, calc(($i*5)/100));
+					}
+				}
+			}
+		}
+	}
+	
 	@for $i from 0 through 5 {
 		&[data-top-padding="#{$i}"] {
 			.block-editor-inner-blocks {
@@ -18,22 +56,7 @@
 			}
 		}
 	}
-
-    &[data-desktop-image-position="top"] {
-		.block-editor-inner-blocks figure img {
-			object-position: top;
-		}
-	}
-	&[data-desktop-image-position="middle"] {
-		.block-editor-inner-blocks figure img {
-			object-position: middle;
-		}
-	}
-	&[data-desktop-image-position="bottom"] {
-		.block-editor-inner-blocks figure img {
-			object-position: bottom;
-		}
-	}
+	
 
 	.image-background-content {
 		position: absolute;

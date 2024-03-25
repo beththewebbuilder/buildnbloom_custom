@@ -51,9 +51,7 @@ const {
 
 // inner content settings
 const ALLLOWED_BLOCKS = ['core/group'];
-const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
-  className: 'desktop-image'
-}], ['core/group', {
+const BLOCK_TEMPLATE = [['core/group', {}, [['core/group', {
   className: 'image-background-content'
 }, [['core/group', {
   className: 'content-center-container'
@@ -65,9 +63,7 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
 }], ['core/heading', {
   level: 2,
   placeholder: 'Subheading'
-}], ['core/button']]]]]]], ['core/image', {
-  className: 'mobile-option'
-}]]]];
+}], ['core/button']]]]]]]]]];
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(name, {
   ...settings,
   edit: ({
@@ -153,13 +149,16 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         mobileImageUrl: ""
       });
     }
+    const blockStyle = {
+      backgroundImage: attributes.desktopImageUrl != '' ? 'url("' + attributes.desktopImageUrl + '")' : 'none'
+    };
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
       group: "position"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "full-width-control-wrapper"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       class: "custom-label"
-    }, "Desktop background image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, attributes.desktopImageTitle), attributes.desktopImageId == 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+    }, "Desktop background image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, attributes.desktopImageTitle)), attributes.desktopImageId == 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
       title: "Select desktop background",
       value: attributes.desktopImageId,
       onSelect: onSelectDesktopMedia,
@@ -195,7 +194,7 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       className: "full-width-control-wrapper"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       class: "custom-label"
-    }, "Mobile background image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, attributes.mobileImageTitle), attributes.mobileImageId == 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+    }, "Mobile background image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, attributes.mobileImageTitle)), attributes.mobileImageId == 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
       title: "Select mobile background",
       value: attributes.mobileImageId,
       onSelect: onSelectMobileMedia,
@@ -355,25 +354,30 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
       step: 5
     })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       class: "image-background-block custom-block",
-      "data-container-height": attributes.containerHeight,
       "data-mobile-container-height": attributes.mobileHeight,
-      "data-background-opacity": attributes.opacityColour,
       "data-top-padding": attributes.paddingTop,
       "data-bottom-padding": attributes.paddingBottom,
-      "data-opacity-percentage": attributes.backgroundOpacityPercent,
-      "data-desktop-image-position": attributes.desktopImagePosition,
       "data-mobile-image-position": attributes.mobileImagePosition,
       "data-desktop-content-position": attributes.desktopContentPosition,
       "data-mobile-content-position": attributes.mobileContentPosition
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
       src: "https://buildnbloom.co.uk/wp-content/uploads/2023/08/TLF-Image-Button.png"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      class: "background-image",
+      style: blockStyle,
+      "data-container-height": attributes.containerHeight,
+      "data-desktop-image-position": attributes.desktopImagePosition
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      class: "image-overlay",
+      "data-background-opacity": attributes.opacityColour,
+      "data-opacity-percentage": attributes.backgroundOpacityPercent
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
       allowedBlocks: ALLLOWED_BLOCKS,
       template: BLOCK_TEMPLATE,
       templateLock: "all",
       templateInsertUpdatesSelection: false,
       renderAppender: _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks.DefaultBlockAppender
-    })));
+    }))));
   },
   save: _save__WEBPACK_IMPORTED_MODULE_8__["default"]
 });
