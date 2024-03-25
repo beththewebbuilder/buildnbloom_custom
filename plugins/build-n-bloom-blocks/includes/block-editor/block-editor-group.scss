@@ -35,3 +35,20 @@
     font-weight: 500;
     line-height: 2.4;
 }
+
+.flex-container {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-flow: wrap;
+    gap: calc(16px);
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .flex-item {
+        flex-grow: 1;
+        justify-content: center;
+    }
+}

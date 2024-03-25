@@ -38,6 +38,20 @@
   font-weight: 500;
   line-height: 2.4;
 }
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.flex-container .flex-item {
+  flex-grow: 1;
+  justify-content: center;
+}
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./includes/block-editor/blocks/image-background/editor.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************/

@@ -125,50 +125,109 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/image', {
         mobileContentPosition: newMobileContentPosition
       });
     }
-    function onSelectMedia(newImage) {
+    function onSelectDesktopMedia(newImage) {
       setAttributes({
         desktopImageId: newImage.id,
         desktopImageTitle: newImage.title,
         desktopImageUrl: newImage.url
       });
     }
-    function removeMedia() {
+    function removeDesktopMedia() {
       setAttributes({
         desktopImageId: 0,
         desktopImageTitle: "",
         desktopImageUrl: ""
       });
     }
+    function onSelectMobileMedia(newImage) {
+      setAttributes({
+        mobileImageId: newImage.id,
+        mobileImageTitle: newImage.title,
+        mobileImageUrl: newImage.url
+      });
+    }
+    function removeMobileMedia() {
+      setAttributes({
+        mobileImageId: 0,
+        mobileImageTitle: "",
+        mobileImageUrl: ""
+      });
+    }
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, {
       group: "position"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "full-width-control-wrapper"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      class: "custom-label"
+    }, "Desktop background image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, attributes.desktopImageTitle), attributes.desktopImageId == 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
       title: "Select desktop background",
       value: attributes.desktopImageId,
-      onSelect: onSelectMedia,
-      render: ({
-        open
-      }) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-        onClick: open
-      }, attributes.desktopImageId == 0 && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Choose an image', 'awp'))
-    })), attributes.desktopImageId != 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
-      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Replace image', 'awp'),
-      value: attributes.desktopImageId,
-      onSelect: onSelectMedia,
-      allowedTypes: ['image'],
+      onSelect: onSelectDesktopMedia,
+      allowedTypes: ['image', 'video'],
       render: ({
         open
       }) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
         onClick: open,
-        isDefault: true,
+        variant: "primary",
         isLarge: true
-      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Replace image', 'awp'))
+      }, attributes.desktopImageId == 0 && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Choose an image', 'awp'))
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      class: "flex-container"
+    }, attributes.desktopImageId != 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Replace image', 'awp'),
+      value: attributes.desktopImageId,
+      onSelect: onSelectDesktopMedia,
+      allowedTypes: ['image', 'video'],
+      render: ({
+        open
+      }) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+        className: "flex-item",
+        onClick: open,
+        variant: "secondary",
+        isLarge: true
+      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Replace', 'awp'))
     })), attributes.desktopImageId != 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
-      onClick: removeMedia,
-      isLink: true,
+      className: "flex-item",
+      onClick: removeDesktopMedia,
+      variant: "secondary",
       isDestructive: true
-    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Remove image', 'awp')))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Remove', 'awp'))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: "full-width-control-wrapper"
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      class: "custom-label"
+    }, "Mobile background image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, attributes.mobileImageTitle), attributes.mobileImageId == 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+      title: "Select mobile background",
+      value: attributes.mobileImageId,
+      onSelect: onSelectMobileMedia,
+      allowedTypes: ['image', 'video'],
+      render: ({
+        open
+      }) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+        onClick: open,
+        variant: "primary",
+        isLarge: true
+      }, attributes.mobileImageId == 0 && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Choose an image', 'awp'))
+    })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      class: "flex-container"
+    }, attributes.mobileImageId != 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUpload, {
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Replace image', 'awp'),
+      value: attributes.mobileImageId,
+      onSelect: onSelectMobileMedia,
+      allowedTypes: ['image', 'video'],
+      render: ({
+        open
+      }) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+        className: "flex-item",
+        onClick: open,
+        variant: "secondary",
+        isLarge: true
+      }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Replace', 'awp'))
+    })), attributes.mobileImageId != 0 && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Button, {
+      className: "flex-item",
+      onClick: removeMobileMedia,
+      variant: "secondary",
+      isDestructive: true
+    }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Remove', 'awp'))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "full-width-control-wrapper"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
       label: "Padding top (rem)",
@@ -487,7 +546,7 @@ function _extends() {
   \******************************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"paddingTop":{"type":"number","default":3},"paddingBottom":{"type":"number","default":3},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50},"desktopImagePosition":{"type":"string","default":"middle"},"mobileImagePosition":{"type":"string","default":"middle"},"desktopContentPosition":{"type":"string","default":"middle"},"mobileContentPosition":{"type":"string","default":"middle"},"desktopImageId":{"type":"number","default":0},"desktopImageUrl":{"type":"string","default":""},"desktopImageTitle":{"type":"string","default":""}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"apiVersion":2,"name":"build-n-bloom-blocks/image-background","version":"0.1.0","title":"Image Background","category":"buildnbloom","icon":"format-image","description":"A full width image as background with an optional heading and button displayed on top.","supports":{"html":false},"attributes":{"containerHeight":{"type":"number","default":25},"mobileHeight":{"type":"number","default":25},"paddingTop":{"type":"number","default":3},"paddingBottom":{"type":"number","default":3},"opacityColour":{"type":"string","default":"white"},"backgroundOpacityPercent":{"type":"number","default":50},"desktopImagePosition":{"type":"string","default":"middle"},"mobileImagePosition":{"type":"string","default":"middle"},"desktopContentPosition":{"type":"string","default":"middle"},"mobileContentPosition":{"type":"string","default":"middle"},"desktopImageId":{"type":"number","default":0},"desktopImageUrl":{"type":"string","default":""},"desktopImageTitle":{"type":"string","default":""},"mobileImageId":{"type":"number","default":0},"mobileImageUrl":{"type":"string","default":""},"mobileImageTitle":{"type":"string","default":""}},"textdomain":"multiple-blocks","editorScript":"file:../../../../build/image-background.js","editorStyle":"file:../../../../build/image-background.css","style":"file:../../../../build/style-image-background.css"}');
 
 /***/ })
 

@@ -71,18 +71,32 @@ registerBlockType(name, {
 	function onChangeMobileContentPosition( newMobileContentPosition ) {
 		setAttributes( { mobileContentPosition: newMobileContentPosition } );
 	}
-	function onSelectMedia(newImage) {
+	function onSelectDesktopMedia(newImage) {
 		setAttributes({
 			desktopImageId: newImage.id,
 			desktopImageTitle: newImage.title,
 			desktopImageUrl: newImage.url
 		});
 	}
-	function removeMedia() {
+	function removeDesktopMedia() {
 		setAttributes({
 			desktopImageId: 0,
 			desktopImageTitle: "",
 			desktopImageUrl: ""
+		});
+	}
+	function onSelectMobileMedia(newImage) {
+		setAttributes({
+			mobileImageId: newImage.id,
+			mobileImageTitle: newImage.title,
+			mobileImageUrl: newImage.url
+		});
+	}
+	function removeMobileMedia() {
+		setAttributes({
+			mobileImageId: 0,
+			mobileImageTitle: "",
+			mobileImageUrl: ""
 		});
 	}
 
@@ -91,35 +105,81 @@ registerBlockType(name, {
 		<Fragment>
 			<InspectorControls group="position">
 				<div className="full-width-control-wrapper">
-					<MediaUploadCheck>
-						<MediaUpload
-							title="Select desktop background"
-							value={ attributes.desktopImageId }
-							onSelect={ onSelectMedia }
-							render={ ({open}) => (
-							<button onClick={open}>
-								{ attributes.desktopImageId == 0 && __('Choose an image', 'awp')}
-							</button>
-							)}/>
-					</MediaUploadCheck>
-					{attributes.desktopImageId != 0 && 
+					<div class="custom-label">Desktop background image</div>
+					<div>{attributes.desktopImageTitle}</div>
+					{attributes.desktopImageId == 0 &&
+						<MediaUploadCheck>
+							<MediaUpload
+								title="Select desktop background"
+								value={ attributes.desktopImageId }
+								onSelect={ onSelectDesktopMedia }
+								allowedTypes={['image', 'video']}
+								render={ ({open}) => (
+								<Button onClick={open} variant="primary" isLarge>
+									{ attributes.desktopImageId == 0 && __('Choose an image', 'awp')}
+								</Button>
+								)}/>
+						</MediaUploadCheck>
+					}					
+					<div class="flex-container">
+						{attributes.desktopImageId != 0 && 
 							<MediaUploadCheck>
 								<MediaUpload
 									title={__('Replace image', 'awp')}
 									value={attributes.desktopImageId}
-									onSelect={onSelectMedia}
-									allowedTypes={['image']}
+									onSelect={ onSelectDesktopMedia }
+									allowedTypes={['image', 'video']}
 									render={({open}) => (
-										<Button onClick={open} isDefault isLarge>{__('Replace image', 'awp')}</Button>
+										<Button className="flex-item" onClick={open} variant="secondary" isLarge>{__('Replace', 'awp')}</Button>
 									)}
 								/>
 							</MediaUploadCheck>
 						}
 						{attributes.desktopImageId != 0 && 
 							<MediaUploadCheck>
-								<Button onClick={removeMedia} isLink isDestructive>{__('Remove image', 'awp')}</Button>
+								<Button className="flex-item" onClick={ removeDesktopMedia } variant="secondary" isDestructive>{__('Remove', 'awp')}</Button>
 							</MediaUploadCheck>
 						}
+					</div>
+				</div>
+
+				<div className="full-width-control-wrapper">
+					<div class="custom-label">Mobile background image</div>
+					<div>{ attributes.mobileImageTitle }</div>
+					{ attributes.mobileImageId == 0 &&
+						<MediaUploadCheck>
+							<MediaUpload
+								title="Select mobile background"
+								value={ attributes.mobileImageId }
+								onSelect={ onSelectMobileMedia }
+								allowedTypes={['image', 'video']}
+								render={ ({open}) => (
+								<Button onClick={open} variant="primary" isLarge>
+									{ attributes.mobileImageId == 0 && __('Choose an image', 'awp')}
+								</Button>
+								)}/>
+						</MediaUploadCheck>
+					}					
+					<div class="flex-container">
+						{ attributes.mobileImageId != 0 && 
+							<MediaUploadCheck>
+								<MediaUpload
+									title={__('Replace image', 'awp')}
+									value={attributes.mobileImageId}
+									onSelect={ onSelectMobileMedia }
+									allowedTypes={['image', 'video']}
+									render={({open}) => (
+										<Button className="flex-item" onClick={open} variant="secondary" isLarge>{__('Replace', 'awp')}</Button>
+									)}
+								/>
+							</MediaUploadCheck>
+						}
+						{attributes.mobileImageId != 0 && 
+							<MediaUploadCheck>
+								<Button className="flex-item" onClick={ removeMobileMedia } variant="secondary" isDestructive>{__('Remove', 'awp')}</Button>
+							</MediaUploadCheck>
+						}
+					</div>
 				</div>
 
 				<div className="full-width-control-wrapper">
@@ -185,7 +245,6 @@ registerBlockType(name, {
 						onChange={ onChangeMobileContentPosition } />
 				</div>
 			</InspectorControls>
-			
 			
 			<InspectorControls group="color">
 				<div className="full-width-control-wrapper">

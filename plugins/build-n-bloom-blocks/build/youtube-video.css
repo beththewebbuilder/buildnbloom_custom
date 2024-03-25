@@ -39,4 +39,18 @@
   line-height: 2.4;
 }
 
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.flex-container .flex-item {
+  flex-grow: 1;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=youtube-video.css.map*/

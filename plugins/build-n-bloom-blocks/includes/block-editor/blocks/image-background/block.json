@@ -61,6 +61,18 @@
 		"desktopImageTitle": {
 			"type": "string",
 			"default": ""
+		},
+		"mobileImageId": {
+			"type": "number",
+			"default": 0
+		},
+		"mobileImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"mobileImageTitle": {
+			"type": "string",
+			"default": ""
 		}
     },
 	"textdomain": "multiple-blocks",
