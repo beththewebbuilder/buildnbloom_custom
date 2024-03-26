@@ -321,27 +321,6 @@
 .image-background-block .background-image .block-editor-inner-blocks .block-editor-block-list__layout .block-editor-block-list__block .wp-block-button {
   margin: auto;
 }
-.image-background-block .image-background-content {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-.image-background-block .image-background-content .wp-block-group__inner-container, .image-background-block .image-background-content .content-center-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-top: 0;
-}
-.image-background-block .image-background-content .wp-block-group__inner-container .content-center, .image-background-block .image-background-content .content-center-container .content-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 .image-background-block[data-desktop-content-position=top] .image-background-content .content-center-container .content-center {
   top: 5%;
   transform: translate(-50%, -5%);
