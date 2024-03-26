@@ -59,10 +59,10 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/group', {
   className: 'content-center'
 }, [['core/heading', {
   level: 1,
-  placeholder: 'Main large heading'
+  placeholder: 'Main heading...'
 }], ['core/heading', {
   level: 2,
-  placeholder: 'Subheading'
+  placeholder: 'Subheading...'
 }], ['core/button']]]]]]]]]];
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(name, {
   ...settings,
@@ -337,7 +337,7 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/group', {
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "full-width-control-wrapper"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
-      label: "Desktop height",
+      label: "Desktop height (%)",
       value: attributes.containerHeight,
       onChange: onSetContainerHeight,
       min: 5,
@@ -346,7 +346,7 @@ const BLOCK_TEMPLATE = [['core/group', {}, [['core/group', {
     })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "full-width-control-wrapper"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.RangeControl, {
-      label: "Mobile height",
+      label: "Mobile height (%)",
       value: attributes.mobileHeight,
       onChange: onSetMobileContainerHeight,
       min: 5,

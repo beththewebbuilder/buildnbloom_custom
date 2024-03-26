@@ -5,11 +5,25 @@
 	.desktop-image {
 		height: 25vh;
 	}
+
+	@for $i from 0 through 5 {
+		&[data-top-padding="#{$i}"] {
+			.block-editor-block-list__layout {
+				padding-top: calc($i/4) + rem;
+			}
+		}
+		&[data-bottom-padding="#{$i}"] {
+			.block-editor-block-list__layout {
+				padding-bottom: calc($i/4) + rem;
+			}
+		}
+	}
 	
 	.background-image {
 		height: 100%;
 		width: 100%;
 		object-fit: cover;
+		position: relative;
 
 		@for $i from 0 through 20 {
 			&[data-container-height="#{$i * 5}"] {
@@ -18,13 +32,13 @@
 		}
 
 		&[data-desktop-image-position="top"] {
-			background-position: "top center";
+			background-position: top;
 		}
 		&[data-desktop-image-position="middle"] {
-			background-position: "middle center";
+			background-position: center;
 		}
 		&[data-desktop-image-position="bottom"] {
-			background-position: "bottom center";
+			background-position: bottom;
 		}
 
 		.image-overlay {
@@ -42,45 +56,28 @@
 				}
 			}
 		}
-	}
-	
-	@for $i from 0 through 5 {
-		&[data-top-padding="#{$i}"] {
-			.block-editor-inner-blocks {
-				padding-top: $i + rem;
-			}
-		}
-		&[data-bottom-padding="#{$i}"] {
-			.block-editor-inner-blocks {
-				padding-bottom: $i + rem;
-			}
-		}
-	}
-	
 
-	.image-background-content {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-        margin: auto;
-
-        .wp-block-group__inner-container, .content-center-container {
-			position: relative;	
-			width: 100%;
+		.block-editor-inner-blocks {
+			position: absolute;
 			height: 100%;
-            margin-top: 0;
+			width: 100%;
+			top: 0;
+			left: 0;
 
-			.content-center {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				text-align: center;
+			.block-editor-block-list__layout {
+				width: 100%;
+				height: 100%;
+
+				.block-editor-block-list__block {
+					padding: 0;
+
+					.wp-block-button {
+						margin: auto;
+					}
+				}
 			}
 		}
-	}
+	}	
 
     &[data-desktop-content-position="top"] {
 		.image-background-content .content-center-container .content-center {

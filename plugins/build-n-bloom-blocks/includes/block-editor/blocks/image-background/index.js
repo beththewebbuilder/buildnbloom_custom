@@ -26,8 +26,8 @@ const BLOCK_TEMPLATE = [
     ['core/group', { className: 'image-background-content' }, [
         ['core/group', { className: 'content-center-container' }, [
 			['core/group', { className: 'content-center' }, [
-				['core/heading', { level: 1, placeholder: 'Main large heading'}],
-				['core/heading', { level: 2, placeholder: 'Subheading'}],
+				['core/heading', { level: 1, placeholder: 'Main heading...'}],
+				['core/heading', { level: 2, placeholder: 'Subheading...'}],
 				['core/button'],
 			]]
         ]]
@@ -273,7 +273,7 @@ registerBlockType(name, {
 			<InspectorControls group="dimensions">
 				<div className="full-width-control-wrapper">
 					<RangeControl
-						label="Desktop height"
+						label="Desktop height (%)"
 						value={ attributes.containerHeight }
 						onChange={ onSetContainerHeight }
 						min={5}
@@ -282,7 +282,7 @@ registerBlockType(name, {
 				</div>
 				<div className="full-width-control-wrapper">
 					<RangeControl
-						label="Mobile height"
+						label="Mobile height (%)"
 						value={ attributes.mobileHeight }
 						onChange={ onSetMobileContainerHeight }
 						min={5}
