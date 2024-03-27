@@ -411,6 +411,12 @@ const {
   name,
   attributes
 } = _block_json__WEBPACK_IMPORTED_MODULE_4__;
+function displayVideo(imageUrl) {
+  if (imageUrl.endsWith('.mp4') || imageUrl.endsWith('.mov') || imageUrl.endsWith('.avi') || imageUrl.endsWith('.wmv') || imageUrl.endsWith('.avchd') || imageUrl.endsWith('.webm') || imageUrl.endsWith('.flv')) {
+    return "";
+  }
+  return "display: none";
+}
 function save({
   attributes
 }) {
@@ -429,7 +435,14 @@ function save({
     style: blockStyle,
     "data-container-height": attributes.containerHeight,
     "data-desktop-image-position": attributes.desktopImagePosition
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("video", {
+    autoplay: true,
+    muted: true,
+    loop: true,
+    style: displayVideo(attributes.desktopImageUrl)
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("source", {
+    src: attributes.desktopImageUrl
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
     class: "image-overlay",
     "data-background-opacity": attributes.opacityColour,
     "data-opacity-percentage": attributes.backgroundOpacityPercent,
@@ -440,7 +453,14 @@ function save({
     style: mobileBlockStyle,
     "data-mobile-container-height": attributes.mobileHeight,
     "data-mobile-image-position": attributes.mobileImagePosition
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("video", {
+    autoplay: true,
+    muted: true,
+    loop: true,
+    style: displayVideo(attributes.mobileImageUrl)
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("source", {
+    src: attributes.mobileImageUrl
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
     class: "image-overlay",
     "data-background-opacity": attributes.opacityColour,
     "data-opacity-percentage": attributes.backgroundOpacityPercent,

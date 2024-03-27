@@ -3,7 +3,17 @@
 
 This is a theme for designing custom gutenberg blocks for WordPress website to ease site creation.  It contains the following:
 
-#### Image background
+#### Image/Video Banner
+
+This was the first block to be created for this plugin in March 2024. It allows an image to be selected for both desktop and mobile sized screens, image height, position, opacity and content position to be set. Either image or video can be selected and will adjust accordingly.
+A header, subheading and a button can be added to this block. Left blank it will just be an image or video banner. 
+
+TODO:
+- Style the front-end view to match the settings selected
+
+OTHER BLOCKS:
+- Image slider was optional overlay text
+- Video player
 
 ## Getting Started
 
