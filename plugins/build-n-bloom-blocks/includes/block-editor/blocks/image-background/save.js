@@ -6,20 +6,44 @@ const { name, attributes} = json;
 
 export default function save({attributes}) {
 
+	const blockStyle = {
+		backgroundImage: attributes.desktopImageUrl != '' ? 'url("' + attributes.desktopImageUrl + '")' : 'none'
+	};
+	const mobileBlockStyle = {
+		backgroundImage: attributes.mobileImageUrl != '' ? 'url("' + attributes.mobileImageUrl + '")' : 'none'
+	};
+
 	return (
 		<div {...useBlockProps.save()} 
-		data-class={"user-display"} 
-		data-container-height={attributes.containerHeight} 
-		data-mobile-container-height={attributes.mobileHeight}
-		data-background-opacity={attributes.opacityColour}
-		data-top-padding={attributes.paddingTop}
-		data-bottom-padding={attributes.paddingBottom}
-		data-opacity-percentage={attributes.backgroundOpacityPercent}
-		data-desktop-image-position={attributes.desktopImagePosition}
-		data-mobile-image-position={attributes.mobileImagePosition}
+		data-class={"user-display"} 		
 		data-desktop-content-position={attributes.desktopContentPosition}
 		data-mobile-content-position={attributes.mobileContentPosition}>
-			<InnerBlocks.Content/>
+
+			<div class="background-image" 
+				style={blockStyle}
+				data-container-height={attributes.containerHeight}
+				data-desktop-image-position={attributes.desktopImagePosition}>
+				<div class="image-overlay"
+					data-background-opacity={attributes.opacityColour}
+					data-opacity-percentage={attributes.backgroundOpacityPercent}
+					data-top-padding={attributes.paddingTop}
+					data-bottom-padding={attributes.paddingBottom}>
+				</div>
+				<InnerBlocks.Content/>
+			</div>
+
+			<div class="mobile-background-image" 
+				style={mobileBlockStyle}
+				data-mobile-container-height={attributes.mobileHeight}
+				data-mobile-image-position={attributes.mobileImagePosition}>
+				<div class="image-overlay"
+					data-background-opacity={attributes.opacityColour}
+					data-opacity-percentage={attributes.backgroundOpacityPercent}
+					data-top-padding={attributes.paddingTop}
+					data-bottom-padding={attributes.paddingBottom}>
+				</div>
+				<InnerBlocks.Content/>
+			</div>
 		</div>
 	);
 }
